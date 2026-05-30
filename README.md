@@ -54,5 +54,4 @@ Desarrollar un sistema de gestión para el Consultorio Clínico BUENA SALUD que 
 - Seguimiento médico.
 
 
-
-| 1.0 | Creación inicial del proyecto |
+| 1.0 | Creación inicial del proyect
