@@ -1,17 +1,17 @@
-CREATE DATABASE LabConsultorioMedico;
+CREATE DATABASE LabConsultorioClinico;
 GO
 USE [master]
 GO
-CREATE LOGIN [usrconsultoriomedico] WITH PASSWORD = N'123456',
-	DEFAULT_DATABASE = [LabConsultorioMedico],
+CREATE LOGIN [usrconsultorioclinico] WITH PASSWORD = N'123456',
+	DEFAULT_DATABASE = [LabConsultorioClinico],
 	CHECK_EXPIRATION = OFF,
 	CHECK_POLICY = ON
 GO
-USE [LabConsultorioMedico]
+USE [LabConsultorioClinico]
 GO
-CREATE USER [usrconsultoriomedico] FOR LOGIN [usrconsultoriomedico]
+CREATE USER [usrconsultorioclinico] FOR LOGIN [usrconsultorioclinico]
 GO
-ALTER ROLE [db_owner] ADD MEMBER [usrconsultoriomedico]
+ALTER ROLE [db_owner] ADD MEMBER [usrconsultorioclinico]
 GO
 
 DROP TABLE Pago;
