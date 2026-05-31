@@ -358,7 +358,7 @@
             // dtpFFecha
             // 
             this.dtpFFecha.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFFecha.Location = new System.Drawing.Point(889, 88);
+            this.dtpFFecha.Location = new System.Drawing.Point(711, 129);
             this.dtpFFecha.Name = "dtpFFecha";
             this.dtpFFecha.Size = new System.Drawing.Size(219, 22);
             this.dtpFFecha.TabIndex = 49;
@@ -370,7 +370,7 @@
             this.lblFFecha.BackColor = System.Drawing.Color.Transparent;
             this.lblFFecha.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFFecha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblFFecha.Location = new System.Drawing.Point(766, 93);
+            this.lblFFecha.Location = new System.Drawing.Point(708, 98);
             this.lblFFecha.Name = "lblFFecha";
             this.lblFFecha.Size = new System.Drawing.Size(117, 17);
             this.lblFFecha.TabIndex = 48;
@@ -404,7 +404,7 @@
             this.btnBuscar.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = global::CpConsultorioMedico.Properties.Resources.Buscar;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(635, 72);
+            this.btnBuscar.Location = new System.Drawing.Point(604, 81);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.btnBuscar.Size = new System.Drawing.Size(98, 40);
@@ -417,7 +417,7 @@
             // txtParametro
             // 
             this.txtParametro.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtParametro.Location = new System.Drawing.Point(479, 90);
+            this.txtParametro.Location = new System.Drawing.Point(457, 90);
             this.txtParametro.MaxLength = 100;
             this.txtParametro.Name = "txtParametro";
             this.txtParametro.Size = new System.Drawing.Size(141, 22);
@@ -431,7 +431,7 @@
             this.lblParametro.BackColor = System.Drawing.Color.Transparent;
             this.lblParametro.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblParametro.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblParametro.Location = new System.Drawing.Point(350, 95);
+            this.lblParametro.Location = new System.Drawing.Point(329, 93);
             this.lblParametro.Name = "lblParametro";
             this.lblParametro.Size = new System.Drawing.Size(118, 17);
             this.lblParametro.TabIndex = 57;

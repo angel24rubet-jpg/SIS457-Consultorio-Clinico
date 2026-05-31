@@ -134,9 +134,9 @@
             this.gbxLista.BackColor = System.Drawing.Color.Transparent;
             this.gbxLista.Controls.Add(this.dgvLista);
             this.gbxLista.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxLista.Location = new System.Drawing.Point(266, 459);
+            this.gbxLista.Location = new System.Drawing.Point(216, 448);
             this.gbxLista.Name = "gbxLista";
-            this.gbxLista.Size = new System.Drawing.Size(843, 234);
+            this.gbxLista.Size = new System.Drawing.Size(755, 234);
             this.gbxLista.TabIndex = 25;
             this.gbxLista.TabStop = false;
             this.gbxLista.Text = "Entradas del Historial:";
@@ -148,11 +148,11 @@
             this.dgvLista.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvLista.BackgroundColor = System.Drawing.SystemColors.ControlDark;
             this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLista.Location = new System.Drawing.Point(7, 23);
+            this.dgvLista.Location = new System.Drawing.Point(7, 21);
             this.dgvLista.Name = "dgvLista";
             this.dgvLista.ReadOnly = true;
             this.dgvLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLista.Size = new System.Drawing.Size(815, 202);
+            this.dgvLista.Size = new System.Drawing.Size(723, 204);
             this.dgvLista.TabIndex = 0;
             // 
             // pnlAcciones
@@ -165,7 +165,7 @@
             this.pnlAcciones.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlAcciones.Location = new System.Drawing.Point(19, 202);
             this.pnlAcciones.Name = "pnlAcciones";
-            this.pnlAcciones.Size = new System.Drawing.Size(216, 237);
+            this.pnlAcciones.Size = new System.Drawing.Size(180, 237);
             this.pnlAcciones.TabIndex = 26;
             // 
             // btnCerrar
@@ -226,7 +226,7 @@
             this.lblFFecha.AutoSize = true;
             this.lblFFecha.BackColor = System.Drawing.Color.Transparent;
             this.lblFFecha.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFFecha.Location = new System.Drawing.Point(796, 130);
+            this.lblFFecha.Location = new System.Drawing.Point(310, 170);
             this.lblFFecha.Name = "lblFFecha";
             this.lblFFecha.Size = new System.Drawing.Size(87, 17);
             this.lblFFecha.TabIndex = 27;
@@ -235,7 +235,7 @@
             // dtpFFecha
             // 
             this.dtpFFecha.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFFecha.Location = new System.Drawing.Point(913, 127);
+            this.dtpFFecha.Location = new System.Drawing.Point(463, 165);
             this.dtpFFecha.Name = "dtpFFecha";
             this.dtpFFecha.Size = new System.Drawing.Size(218, 22);
             this.dtpFFecha.TabIndex = 28;
@@ -257,9 +257,9 @@
             this.gbxDatos.Controls.Add(this.lblPaciente);
             this.gbxDatos.Controls.Add(this.txtPaciente);
             this.gbxDatos.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxDatos.Location = new System.Drawing.Point(266, 205);
+            this.gbxDatos.Location = new System.Drawing.Point(216, 205);
             this.gbxDatos.Name = "gbxDatos";
-            this.gbxDatos.Size = new System.Drawing.Size(967, 214);
+            this.gbxDatos.Size = new System.Drawing.Size(600, 234);
             this.gbxDatos.TabIndex = 61;
             this.gbxDatos.TabStop = false;
             this.gbxDatos.Text = "Datos";
@@ -269,7 +269,7 @@
             this.btnGuardar.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Image = global::CpConsultorioMedico.Properties.Resources.Guardar;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(274, 168);
+            this.btnGuardar.Location = new System.Drawing.Point(489, 108);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.btnGuardar.Size = new System.Drawing.Size(105, 40);
@@ -283,7 +283,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = global::CpConsultorioMedico.Properties.Resources.Cancelar;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(554, 168);
+            this.btnCancelar.Location = new System.Drawing.Point(489, 21);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.btnCancelar.Size = new System.Drawing.Size(105, 40);
@@ -294,10 +294,10 @@
             // 
             // txtTratamiento
             // 
-            this.txtTratamiento.Location = new System.Drawing.Point(529, 80);
+            this.txtTratamiento.Location = new System.Drawing.Point(128, 143);
             this.txtTratamiento.Multiline = true;
             this.txtTratamiento.Name = "txtTratamiento";
-            this.txtTratamiento.Size = new System.Drawing.Size(326, 56);
+            this.txtTratamiento.Size = new System.Drawing.Size(305, 31);
             this.txtTratamiento.TabIndex = 81;
             // 
             // lblTratamiento
@@ -305,7 +305,7 @@
             this.lblTratamiento.AutoSize = true;
             this.lblTratamiento.BackColor = System.Drawing.Color.Transparent;
             this.lblTratamiento.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTratamiento.Location = new System.Drawing.Point(435, 98);
+            this.lblTratamiento.Location = new System.Drawing.Point(14, 157);
             this.lblTratamiento.Name = "lblTratamiento";
             this.lblTratamiento.Size = new System.Drawing.Size(70, 17);
             this.lblTratamiento.TabIndex = 80;
@@ -313,16 +313,16 @@
             // 
             // txtDiagnostico
             // 
-            this.txtDiagnostico.Location = new System.Drawing.Point(97, 80);
+            this.txtDiagnostico.Location = new System.Drawing.Point(128, 180);
             this.txtDiagnostico.Multiline = true;
             this.txtDiagnostico.Name = "txtDiagnostico";
-            this.txtDiagnostico.Size = new System.Drawing.Size(282, 56);
+            this.txtDiagnostico.Size = new System.Drawing.Size(282, 41);
             this.txtDiagnostico.TabIndex = 79;
             // 
             // cbxDoctor
             // 
             this.cbxDoctor.FormattingEnabled = true;
-            this.cbxDoctor.Location = new System.Drawing.Point(737, 26);
+            this.cbxDoctor.Location = new System.Drawing.Point(128, 108);
             this.cbxDoctor.Name = "cbxDoctor";
             this.cbxDoctor.Size = new System.Drawing.Size(217, 25);
             this.cbxDoctor.TabIndex = 78;
@@ -332,7 +332,7 @@
             this.lblDoctor.AutoSize = true;
             this.lblDoctor.BackColor = System.Drawing.Color.Transparent;
             this.lblDoctor.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDoctor.Location = new System.Drawing.Point(688, 29);
+            this.lblDoctor.Location = new System.Drawing.Point(12, 116);
             this.lblDoctor.Name = "lblDoctor";
             this.lblDoctor.Size = new System.Drawing.Size(43, 17);
             this.lblDoctor.TabIndex = 77;
@@ -341,7 +341,7 @@
             // cbxEspecialidad
             // 
             this.cbxEspecialidad.FormattingEnabled = true;
-            this.cbxEspecialidad.Location = new System.Drawing.Point(513, 26);
+            this.cbxEspecialidad.Location = new System.Drawing.Point(128, 65);
             this.cbxEspecialidad.Name = "cbxEspecialidad";
             this.cbxEspecialidad.Size = new System.Drawing.Size(164, 25);
             this.cbxEspecialidad.TabIndex = 76;
@@ -351,7 +351,7 @@
             this.lblEspecialidad.AutoSize = true;
             this.lblEspecialidad.BackColor = System.Drawing.Color.Transparent;
             this.lblEspecialidad.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEspecialidad.Location = new System.Drawing.Point(435, 29);
+            this.lblEspecialidad.Location = new System.Drawing.Point(12, 65);
             this.lblEspecialidad.Name = "lblEspecialidad";
             this.lblEspecialidad.Size = new System.Drawing.Size(72, 17);
             this.lblEspecialidad.TabIndex = 75;
@@ -362,7 +362,7 @@
             this.lblDiagnostico.AutoSize = true;
             this.lblDiagnostico.BackColor = System.Drawing.Color.Transparent;
             this.lblDiagnostico.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiagnostico.Location = new System.Drawing.Point(12, 98);
+            this.lblDiagnostico.Location = new System.Drawing.Point(12, 204);
             this.lblDiagnostico.Name = "lblDiagnostico";
             this.lblDiagnostico.Size = new System.Drawing.Size(68, 17);
             this.lblDiagnostico.TabIndex = 74;

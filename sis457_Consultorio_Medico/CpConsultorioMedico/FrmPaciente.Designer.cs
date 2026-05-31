@@ -137,7 +137,7 @@
             this.gbxLista.BackColor = System.Drawing.Color.Transparent;
             this.gbxLista.Controls.Add(this.dgvLista);
             this.gbxLista.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.gbxLista.Location = new System.Drawing.Point(322, 194);
+            this.gbxLista.Location = new System.Drawing.Point(269, 382);
             this.gbxLista.Name = "gbxLista";
             this.gbxLista.Size = new System.Drawing.Size(568, 352);
             this.gbxLista.TabIndex = 11;
@@ -217,6 +217,7 @@
             // gbxDatos
             // 
             this.gbxDatos.BackColor = System.Drawing.Color.Transparent;
+            this.gbxDatos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gbxDatos.BackgroundImage")));
             this.gbxDatos.Controls.Add(this.btnCancelar);
             this.gbxDatos.Controls.Add(this.btnGuardar);
             this.gbxDatos.Controls.Add(this.txtDireccion);
@@ -228,9 +229,9 @@
             this.gbxDatos.Controls.Add(this.txtCedulaIdentidad);
             this.gbxDatos.Controls.Add(this.lblCedulaIdentidad);
             this.gbxDatos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.gbxDatos.Location = new System.Drawing.Point(130, 526);
+            this.gbxDatos.Location = new System.Drawing.Point(269, 194);
             this.gbxDatos.Name = "gbxDatos";
-            this.gbxDatos.Size = new System.Drawing.Size(950, 160);
+            this.gbxDatos.Size = new System.Drawing.Size(743, 160);
             this.gbxDatos.TabIndex = 33;
             this.gbxDatos.TabStop = false;
             this.gbxDatos.Text = "Datos";
@@ -241,7 +242,7 @@
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnCancelar.Image = global::CpConsultorioMedico.Properties.Resources.Cancelar;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(825, 102);
+            this.btnCancelar.Location = new System.Drawing.Point(591, 17);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.btnCancelar.Size = new System.Drawing.Size(98, 40);
@@ -257,7 +258,7 @@
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnGuardar.Image = global::CpConsultorioMedico.Properties.Resources.Guardar;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(702, 102);
+            this.btnGuardar.Location = new System.Drawing.Point(470, 17);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.btnGuardar.Size = new System.Drawing.Size(98, 40);

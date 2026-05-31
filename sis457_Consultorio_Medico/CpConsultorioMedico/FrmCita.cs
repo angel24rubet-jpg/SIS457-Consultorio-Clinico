@@ -176,10 +176,10 @@ namespace CpConsultorioMedico
         }
         private void txtParametro_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Enter) 
+            if (e.KeyChar == (char)Keys.Enter)
             {
                 listar();
-                obtenerPaciente(); 
+                obtenerPaciente();
             }
         }
         public void listarFecha()
@@ -330,11 +330,19 @@ namespace CpConsultorioMedico
             if (validar())
             {
                 var cita = new Cita();
-                cita.idEspecialidad = Convert.ToInt32(cbxEspecialidad.SelectedValue);
-                cita.idDoctor = Convert.ToInt32(cbxDoctor.SelectedValue);
+
+                // Proteger accesos que podrían ser null
+                int idEspecialidadSelected = 0;
+                int idDoctorSelected = 0;
+                if (cbxEspecialidad?.SelectedValue != null) int.TryParse(cbxEspecialidad.SelectedValue.ToString(), out idEspecialidadSelected);
+                if (cbxDoctor?.SelectedValue != null) int.TryParse(cbxDoctor.SelectedValue.ToString(), out idDoctorSelected);
+
+                cita.idEspecialidad = idEspecialidadSelected;
+                cita.idDoctor = idDoctorSelected;
                 cita.fecha = dtpFecha.Value;
-                cita.hora = (TimeSpan)cbxHora.SelectedItem;
-                cita.usuarioRegistro = Util.usuario.usuario;
+                cita.hora = cbxHora.SelectedItem is TimeSpan ts ? ts : default(TimeSpan);
+                // Proteger Util.usuario
+                cita.usuarioRegistro = Util.usuario?.usuario ?? string.Empty;
 
                 if (esNuevo)
                 {
@@ -349,7 +357,7 @@ namespace CpConsultorioMedico
                         return;
                     }
 
-                    if (CitaCln.existeCita(paciente.id, Convert.ToInt32(cbxEspecialidad.SelectedValue), dtpFecha.Value))
+                    if (CitaCln.existeCita(paciente.id, cita.idEspecialidad, dtpFecha.Value))
                     {
                         MessageBox.Show("Este paciente ya tiene una cita registrada para esta especialidad en la misma fecha.",
                             "::: Consultorio Médico - Mensaje :::",
@@ -363,8 +371,25 @@ namespace CpConsultorioMedico
                 }
                 else
                 {
-                    int index = dgvLista.CurrentCell.RowIndex;
-                    cita.id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
+                    // Comprobaciones para evitar NullReferenceException al editar
+                    if (dgvLista == null || dgvLista.CurrentRow == null)
+                    {
+                        MessageBox.Show("No hay una cita seleccionada para editar.", "::: Consultorio Médico - Mensaje :::",
+                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    // Obtener id de forma segura usando GetCellValue
+                    var idObj = GetCellValue(dgvLista.CurrentRow, "id");
+                    if (idObj == null || !int.TryParse(idObj.ToString(), out int id))
+                    {
+                        MessageBox.Show("No se pudo obtener el identificador de la cita seleccionada.", "::: Consultorio Médico - Mensaje :::",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    cita.id = id;
+
                     var paciente = PacienteCln.buscar(txtPaciente.Text.Trim());
 
                     if (paciente == null)
@@ -466,8 +491,8 @@ namespace CpConsultorioMedico
             var parametro = parametroValido;
             if (dtpFFecha.Value > DateTime.Now)
             {
-               var lista = CitaCln.listarFecha(dtpFFecha.Value);
-               dgvLista.DataSource = lista;
+                var lista = CitaCln.listarFecha(dtpFFecha.Value);
+                dgvLista.DataSource = lista;
             }
             else
             {
@@ -477,7 +502,7 @@ namespace CpConsultorioMedico
         }
         private void dgvLista_SelectionChanged(object sender, EventArgs e)
         {
-               if (dgvLista.CurrentRow == null)
+            if (dgvLista.CurrentRow == null)
             {
                 btnPagar.Enabled = false;
                 btnEditar.Enabled = false;
