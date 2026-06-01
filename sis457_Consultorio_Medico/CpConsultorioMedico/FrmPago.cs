@@ -131,5 +131,15 @@ namespace CpConsultorioMedico
         {
 
         }
+
+        private void txtEspecialidad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblEspecialidad_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

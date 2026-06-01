@@ -227,5 +227,10 @@ namespace CpConsultorioMedico
         {
 
         }
+
+        private void lblEspecilaidad_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

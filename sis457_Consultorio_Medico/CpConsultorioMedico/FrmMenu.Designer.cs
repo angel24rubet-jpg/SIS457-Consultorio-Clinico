@@ -52,12 +52,12 @@
             // 
             this.btnAyuda.BackColor = System.Drawing.Color.SkyBlue;
             this.btnAyuda.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAyuda.Font = new System.Drawing.Font("Wide Latin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAyuda.Location = new System.Drawing.Point(5, 462);
+            this.btnAyuda.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAyuda.Location = new System.Drawing.Point(5, 682);
             this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(295, 59);
+            this.btnAyuda.Size = new System.Drawing.Size(295, 97);
             this.btnAyuda.TabIndex = 0;
-            this.btnAyuda.Text = "Ayuda";
+            this.btnAyuda.Text = "AYUDA";
             this.btnAyuda.UseVisualStyleBackColor = false;
             this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
@@ -65,12 +65,12 @@
             // 
             this.btnReportes.BackColor = System.Drawing.Color.SkyBlue;
             this.btnReportes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReportes.Font = new System.Drawing.Font("Wide Latin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportes.Location = new System.Drawing.Point(5, 405);
+            this.btnReportes.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportes.Location = new System.Drawing.Point(5, 593);
             this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(295, 57);
+            this.btnReportes.Size = new System.Drawing.Size(295, 89);
             this.btnReportes.TabIndex = 1;
-            this.btnReportes.Text = "Reportes";
+            this.btnReportes.Text = "REPORTES";
             this.btnReportes.UseVisualStyleBackColor = false;
             this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
@@ -78,12 +78,12 @@
             // 
             this.btnConcepto.BackColor = System.Drawing.Color.Azure;
             this.btnConcepto.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnConcepto.Font = new System.Drawing.Font("Goudy Stout", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConcepto.Location = new System.Drawing.Point(5, 337);
+            this.btnConcepto.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConcepto.Location = new System.Drawing.Point(5, 495);
             this.btnConcepto.Name = "btnConcepto";
-            this.btnConcepto.Size = new System.Drawing.Size(295, 68);
+            this.btnConcepto.Size = new System.Drawing.Size(295, 98);
             this.btnConcepto.TabIndex = 2;
-            this.btnConcepto.Text = "Concepto";
+            this.btnConcepto.Text = "CONCEPTOS";
             this.btnConcepto.UseVisualStyleBackColor = false;
             this.btnConcepto.Click += new System.EventHandler(this.btnConcepto_Click);
             // 
@@ -92,12 +92,12 @@
             this.btnCitas.BackColor = System.Drawing.Color.Azure;
             this.btnCitas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCitas.BackgroundImage")));
             this.btnCitas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCitas.Font = new System.Drawing.Font("Goudy Stout", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCitas.Location = new System.Drawing.Point(5, 269);
+            this.btnCitas.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCitas.Location = new System.Drawing.Point(5, 391);
             this.btnCitas.Name = "btnCitas";
-            this.btnCitas.Size = new System.Drawing.Size(295, 68);
+            this.btnCitas.Size = new System.Drawing.Size(295, 104);
             this.btnCitas.TabIndex = 3;
-            this.btnCitas.Text = "Citas";
+            this.btnCitas.Text = "CITAS";
             this.btnCitas.UseVisualStyleBackColor = false;
             this.btnCitas.Click += new System.EventHandler(this.btnCitas_Click);
             // 
@@ -106,12 +106,12 @@
             this.btnHistorial.BackColor = System.Drawing.Color.Azure;
             this.btnHistorial.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHistorial.BackgroundImage")));
             this.btnHistorial.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHistorial.Font = new System.Drawing.Font("Goudy Stout", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistorial.Location = new System.Drawing.Point(5, 202);
+            this.btnHistorial.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistorial.Location = new System.Drawing.Point(5, 291);
             this.btnHistorial.Name = "btnHistorial";
-            this.btnHistorial.Size = new System.Drawing.Size(295, 67);
+            this.btnHistorial.Size = new System.Drawing.Size(295, 100);
             this.btnHistorial.TabIndex = 4;
-            this.btnHistorial.Text = "Historial Clínico";
+            this.btnHistorial.Text = "HISTORIAL CLINICO";
             this.btnHistorial.UseVisualStyleBackColor = false;
             this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click);
             // 
@@ -120,12 +120,12 @@
             this.btnEspecialidades.BackColor = System.Drawing.Color.Azure;
             this.btnEspecialidades.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEspecialidades.BackgroundImage")));
             this.btnEspecialidades.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEspecialidades.Font = new System.Drawing.Font("Goudy Stout", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEspecialidades.Location = new System.Drawing.Point(5, 136);
+            this.btnEspecialidades.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEspecialidades.Location = new System.Drawing.Point(5, 190);
             this.btnEspecialidades.Name = "btnEspecialidades";
-            this.btnEspecialidades.Size = new System.Drawing.Size(295, 66);
+            this.btnEspecialidades.Size = new System.Drawing.Size(295, 101);
             this.btnEspecialidades.TabIndex = 5;
-            this.btnEspecialidades.Text = "Especialidades";
+            this.btnEspecialidades.Text = "ESPECIALIDADES";
             this.btnEspecialidades.UseVisualStyleBackColor = false;
             this.btnEspecialidades.Click += new System.EventHandler(this.btnEspecialidades_Click);
             // 
@@ -134,12 +134,12 @@
             this.btnDoctores.BackColor = System.Drawing.Color.Azure;
             this.btnDoctores.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDoctores.BackgroundImage")));
             this.btnDoctores.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDoctores.Font = new System.Drawing.Font("Goudy Stout", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoctores.Location = new System.Drawing.Point(5, 69);
+            this.btnDoctores.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoctores.Location = new System.Drawing.Point(5, 93);
             this.btnDoctores.Name = "btnDoctores";
-            this.btnDoctores.Size = new System.Drawing.Size(295, 67);
+            this.btnDoctores.Size = new System.Drawing.Size(295, 97);
             this.btnDoctores.TabIndex = 6;
-            this.btnDoctores.Text = "Doctores";
+            this.btnDoctores.Text = "DOCTORES";
             this.btnDoctores.UseVisualStyleBackColor = false;
             this.btnDoctores.Click += new System.EventHandler(this.btnDoctores_Click);
             // 
@@ -148,12 +148,12 @@
             this.btnPacientes.BackColor = System.Drawing.Color.Azure;
             this.btnPacientes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPacientes.BackgroundImage")));
             this.btnPacientes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPacientes.Font = new System.Drawing.Font("Goudy Stout", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPacientes.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPacientes.Location = new System.Drawing.Point(5, 5);
             this.btnPacientes.Name = "btnPacientes";
-            this.btnPacientes.Size = new System.Drawing.Size(295, 64);
+            this.btnPacientes.Size = new System.Drawing.Size(295, 88);
             this.btnPacientes.TabIndex = 7;
-            this.btnPacientes.Text = "Pacientes";
+            this.btnPacientes.Text = "PACIENTE";
             this.btnPacientes.UseVisualStyleBackColor = false;
             this.btnPacientes.Click += new System.EventHandler(this.btnPacientes_Click);
             // 

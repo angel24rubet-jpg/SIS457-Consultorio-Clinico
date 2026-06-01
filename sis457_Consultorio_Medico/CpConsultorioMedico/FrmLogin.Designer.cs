@@ -80,8 +80,8 @@
             // lblAgregarEditar
             // 
             this.lblAgregarEditar.BackColor = System.Drawing.Color.Transparent;
-            this.lblAgregarEditar.Font = new System.Drawing.Font("Bernard MT Condensed", 21.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAgregarEditar.Location = new System.Drawing.Point(3, 18);
+            this.lblAgregarEditar.Font = new System.Drawing.Font("Times New Roman", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgregarEditar.Location = new System.Drawing.Point(-39, 29);
             this.lblAgregarEditar.Name = "lblAgregarEditar";
             this.lblAgregarEditar.Size = new System.Drawing.Size(372, 40);
             this.lblAgregarEditar.TabIndex = 1;
@@ -91,18 +91,18 @@
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 12F);
-            this.lblUsuario.Location = new System.Drawing.Point(31, 106);
+            this.lblUsuario.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(31, 107);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(58, 21);
+            this.lblUsuario.Size = new System.Drawing.Size(101, 26);
             this.lblUsuario.TabIndex = 2;
             this.lblUsuario.Text = "Usuario:";
             // 
             // txtUsuario
             // 
             this.txtUsuario.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtUsuario.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F);
-            this.txtUsuario.Location = new System.Drawing.Point(120, 106);
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtUsuario.Location = new System.Drawing.Point(165, 107);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(200, 22);
             this.txtUsuario.TabIndex = 3;
@@ -110,18 +110,18 @@
             // lblClave
             // 
             this.lblClave.AutoSize = true;
-            this.lblClave.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 12F);
-            this.lblClave.Location = new System.Drawing.Point(31, 170);
+            this.lblClave.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClave.Location = new System.Drawing.Point(21, 170);
             this.lblClave.Name = "lblClave";
-            this.lblClave.Size = new System.Drawing.Size(78, 21);
+            this.lblClave.Size = new System.Drawing.Size(138, 26);
             this.lblClave.TabIndex = 4;
             this.lblClave.Text = "Contraseña:";
             // 
             // txtClave
             // 
             this.txtClave.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtClave.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F);
-            this.txtClave.Location = new System.Drawing.Point(120, 170);
+            this.txtClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtClave.Location = new System.Drawing.Point(165, 174);
             this.txtClave.Name = "txtClave";
             this.txtClave.PasswordChar = '*';
             this.txtClave.Size = new System.Drawing.Size(200, 22);
@@ -130,10 +130,10 @@
             // btnIngresar
             // 
             this.btnIngresar.BackColor = System.Drawing.Color.White;
-            this.btnIngresar.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 11.25F);
+            this.btnIngresar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.Image = global::CpConsultorioMedico.Properties.Resources.Aceptar;
             this.btnIngresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIngresar.Location = new System.Drawing.Point(60, 220);
+            this.btnIngresar.Location = new System.Drawing.Point(58, 238);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(110, 45);
             this.btnIngresar.TabIndex = 6;
@@ -145,10 +145,10 @@
             // btnCerrar
             // 
             this.btnCerrar.BackColor = System.Drawing.Color.White;
-            this.btnCerrar.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 11.25F);
+            this.btnCerrar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.Image = global::CpConsultorioMedico.Properties.Resources.Cerrar;
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrar.Location = new System.Drawing.Point(200, 220);
+            this.btnCerrar.Location = new System.Drawing.Point(223, 238);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(110, 45);
             this.btnCerrar.TabIndex = 7;
@@ -167,14 +167,14 @@
             // 
             // FrmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(965, 499);
             this.Controls.Add(this.pnlLogin);
             this.DoubleBuffered = true;
-            this.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmLogin";
             this.Text = "::: Consultorio Médico - Login :::";

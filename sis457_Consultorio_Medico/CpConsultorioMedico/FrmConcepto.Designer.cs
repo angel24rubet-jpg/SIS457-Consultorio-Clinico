@@ -51,8 +51,8 @@
             // txtConcepto
             // 
             this.txtConcepto.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtConcepto.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConcepto.Location = new System.Drawing.Point(159, 276);
+            this.txtConcepto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConcepto.Location = new System.Drawing.Point(580, 453);
             this.txtConcepto.MaxLength = 100;
             this.txtConcepto.Name = "txtConcepto";
             this.txtConcepto.Size = new System.Drawing.Size(255, 22);
@@ -63,44 +63,44 @@
             // 
             this.lblEspecialidad.AutoSize = true;
             this.lblEspecialidad.BackColor = System.Drawing.Color.Transparent;
-            this.lblEspecialidad.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEspecialidad.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEspecialidad.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblEspecialidad.Location = new System.Drawing.Point(64, 228);
+            this.lblEspecialidad.Location = new System.Drawing.Point(430, 399);
             this.lblEspecialidad.Name = "lblEspecialidad";
-            this.lblEspecialidad.Size = new System.Drawing.Size(72, 17);
+            this.lblEspecialidad.Size = new System.Drawing.Size(119, 22);
             this.lblEspecialidad.TabIndex = 88;
             this.lblEspecialidad.Text = "Especialidad:";
             // 
             // cbxEspecialidad
             // 
-            this.cbxEspecialidad.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxEspecialidad.FormattingEnabled = true;
-            this.cbxEspecialidad.Location = new System.Drawing.Point(181, 225);
+            this.cbxEspecialidad.Location = new System.Drawing.Point(595, 400);
             this.cbxEspecialidad.Name = "cbxEspecialidad";
-            this.cbxEspecialidad.Size = new System.Drawing.Size(181, 25);
+            this.cbxEspecialidad.Size = new System.Drawing.Size(181, 24);
             this.cbxEspecialidad.TabIndex = 1;
             // 
             // lblConcepto
             // 
             this.lblConcepto.AutoSize = true;
             this.lblConcepto.BackColor = System.Drawing.Color.Transparent;
-            this.lblConcepto.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConcepto.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConcepto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblConcepto.Location = new System.Drawing.Point(64, 281);
+            this.lblConcepto.Location = new System.Drawing.Point(430, 452);
             this.lblConcepto.Name = "lblConcepto";
-            this.lblConcepto.Size = new System.Drawing.Size(57, 17);
+            this.lblConcepto.Size = new System.Drawing.Size(93, 22);
             this.lblConcepto.TabIndex = 86;
             this.lblConcepto.Text = "Concepto:";
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = global::CpConsultorioMedico.Properties.Resources.Cancelar;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(502, 349);
+            this.btnCancelar.Location = new System.Drawing.Point(830, 533);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.btnCancelar.Size = new System.Drawing.Size(98, 40);
+            this.btnCancelar.Size = new System.Drawing.Size(116, 40);
             this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -109,13 +109,13 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Image = global::CpConsultorioMedico.Properties.Resources.Añadir_especialidad;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(338, 349);
+            this.btnGuardar.Location = new System.Drawing.Point(697, 533);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.btnGuardar.Size = new System.Drawing.Size(98, 40);
+            this.btnGuardar.Size = new System.Drawing.Size(107, 40);
             this.btnGuardar.TabIndex = 3;
             this.btnGuardar.Text = "Añadir";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -125,12 +125,12 @@
             // lblAgregarConcepto
             // 
             this.lblAgregarConcepto.BackColor = System.Drawing.Color.Transparent;
-            this.lblAgregarConcepto.Font = new System.Drawing.Font("Wide Latin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgregarConcepto.Font = new System.Drawing.Font("Times New Roman", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAgregarConcepto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblAgregarConcepto.Location = new System.Drawing.Point(444, 22);
+            this.lblAgregarConcepto.Location = new System.Drawing.Point(609, 26);
             this.lblAgregarConcepto.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblAgregarConcepto.Name = "lblAgregarConcepto";
-            this.lblAgregarConcepto.Size = new System.Drawing.Size(420, 39);
+            this.lblAgregarConcepto.Size = new System.Drawing.Size(552, 152);
             this.lblAgregarConcepto.TabIndex = 83;
             this.lblAgregarConcepto.Text = "Agregar Concepto";
             this.lblAgregarConcepto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -139,17 +139,17 @@
             // 
             this.lblCosto.AutoSize = true;
             this.lblCosto.BackColor = System.Drawing.Color.Transparent;
-            this.lblCosto.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCosto.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCosto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblCosto.Location = new System.Drawing.Point(499, 228);
+            this.lblCosto.Location = new System.Drawing.Point(975, 400);
             this.lblCosto.Name = "lblCosto";
-            this.lblCosto.Size = new System.Drawing.Size(39, 17);
+            this.lblCosto.Size = new System.Drawing.Size(63, 22);
             this.lblCosto.TabIndex = 89;
             this.lblCosto.Text = "Costo:";
             // 
             // nudCosto
             // 
-            this.nudCosto.Location = new System.Drawing.Point(585, 228);
+            this.nudCosto.Location = new System.Drawing.Point(1059, 399);
             this.nudCosto.Name = "nudCosto";
             this.nudCosto.Size = new System.Drawing.Size(120, 22);
             this.nudCosto.TabIndex = 90;
@@ -168,12 +168,12 @@
             // 
             // FrmConcepto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1250, 501);
+            this.ClientSize = new System.Drawing.Size(1250, 758);
             this.Controls.Add(this.nudCosto);
             this.Controls.Add(this.lblCosto);
             this.Controls.Add(this.txtConcepto);
@@ -183,7 +183,7 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.lblAgregarConcepto);
-            this.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmConcepto";

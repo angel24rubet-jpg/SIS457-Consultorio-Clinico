@@ -330,5 +330,15 @@ namespace CpConsultorioMedico
         {
 
         }
+
+        private void txtCelular_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvLista_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

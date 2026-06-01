@@ -57,7 +57,7 @@
             // lblAgregarEditar
             // 
             this.lblAgregarEditar.BackColor = System.Drawing.Color.Transparent;
-            this.lblAgregarEditar.Font = new System.Drawing.Font("Wide Latin", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgregarEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAgregarEditar.Location = new System.Drawing.Point(-7, 6);
             this.lblAgregarEditar.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblAgregarEditar.Name = "lblAgregarEditar";
@@ -69,13 +69,13 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = global::CpConsultorioMedico.Properties.Resources.Cancelar;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(409, 216);
+            this.btnCancelar.Location = new System.Drawing.Point(427, 180);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.btnCancelar.Size = new System.Drawing.Size(98, 40);
+            this.btnCancelar.Size = new System.Drawing.Size(107, 40);
             this.btnCancelar.TabIndex = 66;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -84,13 +84,13 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Image = global::CpConsultorioMedico.Properties.Resources.Guardar;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(409, 157);
+            this.btnGuardar.Location = new System.Drawing.Point(295, 180);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.btnGuardar.Size = new System.Drawing.Size(98, 40);
+            this.btnGuardar.Size = new System.Drawing.Size(107, 40);
             this.btnGuardar.TabIndex = 65;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -99,21 +99,21 @@
             // 
             // txtPaciente
             // 
-            this.txtPaciente.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPaciente.Location = new System.Drawing.Point(128, 51);
+            this.txtPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPaciente.Location = new System.Drawing.Point(203, 55);
             this.txtPaciente.MaxLength = 100;
             this.txtPaciente.Name = "txtPaciente";
-            this.txtPaciente.Size = new System.Drawing.Size(352, 22);
+            this.txtPaciente.Size = new System.Drawing.Size(342, 22);
             this.txtPaciente.TabIndex = 68;
             // 
             // lblPaciente
             // 
             this.lblPaciente.AutoSize = true;
             this.lblPaciente.BackColor = System.Drawing.Color.Transparent;
-            this.lblPaciente.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaciente.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPaciente.Location = new System.Drawing.Point(12, 54);
             this.lblPaciente.Name = "lblPaciente";
-            this.lblPaciente.Size = new System.Drawing.Size(110, 17);
+            this.lblPaciente.Size = new System.Drawing.Size(185, 22);
             this.lblPaciente.TabIndex = 67;
             this.lblPaciente.Text = "Nombre del Paciente:";
             // 
@@ -121,26 +121,26 @@
             // 
             this.lblCosto.AutoSize = true;
             this.lblCosto.BackColor = System.Drawing.Color.Transparent;
-            this.lblCosto.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCosto.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCosto.Location = new System.Drawing.Point(30, 157);
             this.lblCosto.Name = "lblCosto";
-            this.lblCosto.Size = new System.Drawing.Size(39, 17);
+            this.lblCosto.Size = new System.Drawing.Size(63, 22);
             this.lblCosto.TabIndex = 73;
             this.lblCosto.Text = "Costo:";
             // 
             // nudCosto
             // 
             this.nudCosto.Enabled = false;
-            this.nudCosto.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudCosto.Location = new System.Drawing.Point(97, 157);
+            this.nudCosto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudCosto.Location = new System.Drawing.Point(112, 157);
             this.nudCosto.Name = "nudCosto";
             this.nudCosto.Size = new System.Drawing.Size(120, 22);
             this.nudCosto.TabIndex = 74;
             // 
             // nudEfectivo
             // 
-            this.nudEfectivo.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudEfectivo.Location = new System.Drawing.Point(97, 198);
+            this.nudEfectivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudEfectivo.Location = new System.Drawing.Point(112, 198);
             this.nudEfectivo.Name = "nudEfectivo";
             this.nudEfectivo.Size = new System.Drawing.Size(120, 22);
             this.nudEfectivo.TabIndex = 76;
@@ -150,18 +150,18 @@
             // 
             this.lblEfectivo.AutoSize = true;
             this.lblEfectivo.BackColor = System.Drawing.Color.Transparent;
-            this.lblEfectivo.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEfectivo.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEfectivo.Location = new System.Drawing.Point(20, 198);
             this.lblEfectivo.Name = "lblEfectivo";
-            this.lblEfectivo.Size = new System.Drawing.Size(49, 17);
+            this.lblEfectivo.Size = new System.Drawing.Size(82, 22);
             this.lblEfectivo.TabIndex = 75;
             this.lblEfectivo.Text = "Efectivo:";
             // 
             // nudCambio
             // 
             this.nudCambio.Enabled = false;
-            this.nudCambio.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudCambio.Location = new System.Drawing.Point(97, 239);
+            this.nudCambio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudCambio.Location = new System.Drawing.Point(112, 239);
             this.nudCambio.Name = "nudCambio";
             this.nudCambio.Size = new System.Drawing.Size(120, 22);
             this.nudCambio.TabIndex = 78;
@@ -170,10 +170,10 @@
             // 
             this.lblCambio.AutoSize = true;
             this.lblCambio.BackColor = System.Drawing.Color.Transparent;
-            this.lblCambio.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCambio.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCambio.Location = new System.Drawing.Point(20, 239);
             this.lblCambio.Name = "lblCambio";
-            this.lblCambio.Size = new System.Drawing.Size(48, 17);
+            this.lblCambio.Size = new System.Drawing.Size(79, 22);
             this.lblCambio.TabIndex = 77;
             this.lblCambio.Text = "Cambio:";
             // 
@@ -181,20 +181,20 @@
             // 
             this.lblConcepto.AutoSize = true;
             this.lblConcepto.BackColor = System.Drawing.Color.Transparent;
-            this.lblConcepto.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConcepto.Location = new System.Drawing.Point(12, 109);
+            this.lblConcepto.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConcepto.Location = new System.Drawing.Point(12, 114);
             this.lblConcepto.Name = "lblConcepto";
-            this.lblConcepto.Size = new System.Drawing.Size(57, 17);
+            this.lblConcepto.Size = new System.Drawing.Size(93, 22);
             this.lblConcepto.TabIndex = 79;
             this.lblConcepto.Text = "Concepto:";
             // 
             // cbxConcepto
             // 
-            this.cbxConcepto.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxConcepto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxConcepto.FormattingEnabled = true;
-            this.cbxConcepto.Location = new System.Drawing.Point(128, 106);
+            this.cbxConcepto.Location = new System.Drawing.Point(203, 112);
             this.cbxConcepto.Name = "cbxConcepto";
-            this.cbxConcepto.Size = new System.Drawing.Size(311, 25);
+            this.cbxConcepto.Size = new System.Drawing.Size(311, 24);
             this.cbxConcepto.TabIndex = 80;
             this.cbxConcepto.SelectedIndexChanged += new System.EventHandler(this.cbxConcepto_SelectedIndexChanged);
             // 
@@ -202,21 +202,23 @@
             // 
             this.lblEspecialidad.AutoSize = true;
             this.lblEspecialidad.BackColor = System.Drawing.Color.Transparent;
-            this.lblEspecialidad.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEspecialidad.Location = new System.Drawing.Point(12, 80);
+            this.lblEspecialidad.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEspecialidad.Location = new System.Drawing.Point(12, 83);
             this.lblEspecialidad.Name = "lblEspecialidad";
-            this.lblEspecialidad.Size = new System.Drawing.Size(72, 17);
+            this.lblEspecialidad.Size = new System.Drawing.Size(119, 22);
             this.lblEspecialidad.TabIndex = 81;
             this.lblEspecialidad.Text = "Especialidad:";
+            this.lblEspecialidad.Click += new System.EventHandler(this.lblEspecialidad_Click);
             // 
             // txtEspecialidad
             // 
-            this.txtEspecialidad.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEspecialidad.Location = new System.Drawing.Point(128, 78);
+            this.txtEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEspecialidad.Location = new System.Drawing.Point(203, 83);
             this.txtEspecialidad.MaxLength = 100;
             this.txtEspecialidad.Name = "txtEspecialidad";
             this.txtEspecialidad.Size = new System.Drawing.Size(199, 22);
             this.txtEspecialidad.TabIndex = 82;
+            this.txtEspecialidad.TextChanged += new System.EventHandler(this.txtEspecialidad_TextChanged);
             // 
             // erpConcepto
             // 
