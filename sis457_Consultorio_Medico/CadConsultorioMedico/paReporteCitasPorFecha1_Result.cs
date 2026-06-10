@@ -14,14 +14,14 @@ namespace CadConsultorioMedico
 
 using System;
     
-public partial class paCitaporFechaListar_Result
+public partial class paReporteCitasPorFecha1_Result
 {
 
     public int id { get; set; }
 
-    public string Doctor { get; set; }
-
     public string Paciente { get; set; }
+
+    public string Doctor { get; set; }
 
     public string Especialidad { get; set; }
 

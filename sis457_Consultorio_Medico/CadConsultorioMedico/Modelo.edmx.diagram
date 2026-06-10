@@ -21,6 +21,7 @@
         <AssociationConnector Association="LabConsultorioMedicoModel.fk_Pago_Concepto" ManuallyRouted="false" />
         <AssociationConnector Association="LabConsultorioMedicoModel.fk_Doctor_Especialidad" ManuallyRouted="false" />
         <AssociationConnector Association="LabConsultorioMedicoModel.fk_Usuario_Doctor" ManuallyRouted="false" />
+        <AssociationConnector Association="LabConsultorioMedicoModel.FK__Historial__idPac__48CFD27E" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

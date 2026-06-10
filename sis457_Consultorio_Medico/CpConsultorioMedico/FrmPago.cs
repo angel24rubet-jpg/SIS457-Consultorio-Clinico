@@ -108,6 +108,18 @@ namespace CpConsultorioMedico
         {
             if (validar())
             {
+                // agregamos la validacion de pago registrado
+
+                if (PagoCln.existePago(idCita))
+                {
+                    MessageBox.Show(
+                        "Esta cita ya tiene un pago registrado.",
+                        "::: Consultorio Médico - BUENA SALUD :::",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+
+                    return;
+                }
                 var pago = new Pago();
                 pago.idCita = idCita;
                 pago.idConcepto = Convert.ToInt32(cbxConcepto.SelectedValue);

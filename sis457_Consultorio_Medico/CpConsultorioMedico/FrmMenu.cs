@@ -54,11 +54,11 @@ namespace CpConsultorioMedico
         {
             AbrirFormularioEnPanel(new FrmConcepto());
         }
-
+         // aqui agregamos al menu principal reportes
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            // Aquí podrías crear un FrmReportes y mostrarlo
-            MessageBox.Show("Función de Reportes");
+            
+            AbrirFormularioEnPanel(new FrmReporteCitas());
         }
 
         private void btnAyuda_Click(object sender, EventArgs e)

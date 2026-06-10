@@ -130,7 +130,7 @@
             this.btnEliminar.Padding = new System.Windows.Forms.Padding(3, 0, 3, 0);
             this.btnEliminar.Size = new System.Drawing.Size(148, 50);
             this.btnEliminar.TabIndex = 8;
-            this.btnEliminar.Text = "Eliminar Cita";
+            this.btnEliminar.Text = "Anular Cita";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);

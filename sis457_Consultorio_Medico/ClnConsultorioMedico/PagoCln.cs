@@ -75,5 +75,17 @@ namespace ClnConsultorioMedico
                 return context.Pago.FirstOrDefault(x => x.idConcepto == idConcepto);
             }
         }
+
+        // creamos el metodo para validar pago
+
+        public static bool existePago(int idCita)
+        {
+            using (var context = new LabConsultorioMedicoEntities())
+            {
+                return context.Pago.Any(p =>
+                    p.idCita == idCita &&
+                    p.estado != -1);
+            }
+        }
     }
 }

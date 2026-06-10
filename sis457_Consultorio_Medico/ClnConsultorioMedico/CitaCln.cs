@@ -95,5 +95,29 @@ namespace ClnConsultorioMedico
                     c.estado != -1); // opcional si manejas citas anuladas con estado -1
             }
         }
+
+        // metodo que nos permite no poder agendar cita en un horario ocupado y con el mismo doctor
+
+        public static bool existeHorarioOcupado(int idDoctor, DateTime fecha, TimeSpan hora)
+        {
+            using (var context = new LabConsultorioMedicoEntities())
+            {
+                return context.Cita.Any(c =>
+                    c.idDoctor == idDoctor &&
+                    DbFunctions.TruncateTime(c.fecha) == fecha.Date &&
+                    c.hora == hora &&
+                    c.estado != -1);
+            }
+        }
+        //nuevo metodo para el reporte
+
+        public static List<paReporteCitasPorFecha_Result> reporteCitasPorFecha(DateTime fechaInicio, DateTime fechaFin)
+        {
+            using (var context = new LabConsultorioMedicoEntities())
+            {
+                return context.paReporteCitasPorFecha(fechaInicio, fechaFin).ToList();
+            }
+        }
+
     }
 }

@@ -134,6 +134,11 @@ namespace CpConsultorioMedico
         private void FrmCita_Load(object sender, EventArgs e)
         {
             Size = new Size(862, 539);
+
+            // evita celeccionar fechas pasadas
+
+            dtpFecha.MinDate = DateTime.Today;
+
             listar();
             cargarEspecialidades();
             cargarHoras();
@@ -360,8 +365,22 @@ namespace CpConsultorioMedico
                     if (CitaCln.existeCita(paciente.id, cita.idEspecialidad, dtpFecha.Value))
                     {
                         MessageBox.Show("Este paciente ya tiene una cita registrada para esta especialidad en la misma fecha.",
-                            "::: Consultorio Médico - Mensaje :::",
+                            "::: Consultorio Médico - BUENA SALUD :::",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+                    // comprobacion de que el doctor ya tiene una citaen esa fecha y horario 
+
+                    if (CitaCln.existeHorarioOcupado(
+                        cita.idDoctor,
+                        dtpFecha.Value,
+                        cita.hora))
+                    {
+                        MessageBox.Show(
+                            "El doctor ya tiene una cita programada en esa fecha y hora.",
+                            "::: Consultorio Médico - BUENA SALUD :::",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning);
                         return;
                     }
                     cita.idPaciente = paciente.id;
@@ -419,13 +438,13 @@ namespace CpConsultorioMedico
             DateTime fecha = Convert.ToDateTime(dgvLista.Rows[index].Cells["fecha"].Value);
             string fechaSolo = fecha.ToString("yyyy/MM/dd");
             string hora = dgvLista.Rows[index].Cells["hora"].Value.ToString();
-            DialogResult dialog = MessageBox.Show($"¿Está seguro que desea eliminar la cita del paciente {paciente} para la fecha {fechaSolo} a horas {hora}?",
-                "::: Consultorio Médico - Mensaje ::: ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dialog = MessageBox.Show($"¿Está seguro que desea anular la cita del paciente {paciente} para la fecha {fechaSolo} a horas {hora}?",
+                "::: Consultorio Médico - BUENA SALUD ::: ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialog == DialogResult.Yes)
             {
-                CitaCln.eliminar(id, "vivi");
+                CitaCln.eliminar(id, Util.usuario.usuario);
                 listar();
-                MessageBox.Show("Cita dada de baja correctamente", "::: Consutorio Médico - Mensaje ::: ",
+                MessageBox.Show("Cita anulada correctamente", "::: Consultorio Médico - BUENA SALUD ::: ",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             txtFPaciente.Clear();
