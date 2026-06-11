@@ -76,5 +76,17 @@ namespace ClnConsultorioMedico
                 return context.Especialidad.Where(x => x.estado != -1).ToList();
             }
         }
+        //metodo d VALIDACION para verificar si la especialidad ya existe por nombre
+
+        public static bool existeNombre(string nombre)
+        {
+            using (var context = new LabConsultorioMedicoEntities())
+            {
+                return context.Especialidad.Any(x =>
+                    x.nombre.ToUpper() == nombre.ToUpper()
+                    && x.estado != -1);
+            }
+        }
+
     }
 }

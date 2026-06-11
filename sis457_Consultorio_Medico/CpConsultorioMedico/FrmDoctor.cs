@@ -206,6 +206,17 @@ namespace CpConsultorioMedico
 
                 if (esNuevo)
                 {
+                    // validar que id de doctor no exista antes de insertar
+
+                    if (DoctorCln.existeCedula(doctor.cedulaIdentidad))
+                    {
+                        MessageBox.Show(
+                            "Ya existe un doctor registrado con esta cédula de identidad.",
+                            "::: Consultorio Médico - BUENA SALUD :::",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning);
+                        return;
+                    }
                     doctor.fechaRegistro = DateTime.Now;
                     doctor.estado = 1;
                     DoctorCln.insertar(doctor, usuario);

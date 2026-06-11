@@ -28,6 +28,7 @@ namespace ClnConsultorioMedico
                 var existente = context.Paciente.Find(paciente.id);
                 existente.cedulaIdentidad = paciente.cedulaIdentidad;
                 existente.nombreCompletoPaciente = paciente.nombreCompletoPaciente;
+                existente.fechaNacimiento = paciente.fechaNacimiento;
                 existente.direccion = paciente.direccion;
                 existente.celular = paciente.celular;
                 existente.usuarioRegistro = paciente.usuarioRegistro;
@@ -59,7 +60,10 @@ namespace ClnConsultorioMedico
         {
             using (var context = new LabConsultorioMedicoEntities())
             {
-                var lista = context.paPacienteListar().ToList();
+                // orden de listado ultimo que entra primero en la fila
+                var lista = context.paPacienteListar()
+                  .OrderByDescending(x => x.id)
+                  .ToList();
 
                 if (string.IsNullOrWhiteSpace(parametro))
                 {
@@ -92,6 +96,17 @@ namespace ClnConsultorioMedico
             {
                 var paciente = context.Paciente.FirstOrDefault(x => x.cedulaIdentidad == cedulaIdentidad && x.estado != -1);
                 return paciente != null ? paciente.nombreCompletoPaciente : null;
+            }
+        }
+        // metodo para validar si el paciente existe por cedula
+
+        public static bool existeCedula(string cedulaIdentidad)
+        {
+            using (var context = new LabConsultorioMedicoEntities())
+            {
+                return context.Paciente.Any(x =>
+                    x.cedulaIdentidad == cedulaIdentidad &&
+                    x.estado != -1);
             }
         }
     }

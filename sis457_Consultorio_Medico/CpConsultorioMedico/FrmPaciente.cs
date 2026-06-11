@@ -21,6 +21,8 @@ namespace CpConsultorioMedico
         public FrmPaciente()
         {
             InitializeComponent();
+            // impide poner fechas a futuro en el DateTimePicker RESTRICCION VISUAL
+            dtpFechaNacimiento.MaxDate = DateTime.Today;
         }
         private bool esNuevo = false;
 
@@ -35,6 +37,9 @@ namespace CpConsultorioMedico
             dgvLista.Columns["nombreCompletoPaciente"].HeaderText = "Nombre Completo";
             dgvLista.Columns["direccion"].HeaderText = "Dirección";
             dgvLista.Columns["celular"].HeaderText = "Celular";
+            // muestra la fecha de nacimiento en el grid
+            if (dgvLista.Columns.Contains("fechaNacimiento"))
+                dgvLista.Columns["fechaNacimiento"].HeaderText = "Fecha Nacimiento";
 
             if (dgvLista.Columns.Contains("usuarioRegistro"))
                 dgvLista.Columns["usuarioRegistro"].HeaderText = "Usuario";
@@ -178,6 +183,9 @@ namespace CpConsultorioMedico
             txtPaciente.Clear();
             txtDireccion.Clear();
             txtCelular.Clear();
+
+            //limpia los datos del anterior y aparece una fecha por defecto
+            dtpFechaNacimiento.Value = DateTime.Today;
         }
 
         private void FrmPaciente_Load(object sender, EventArgs e)
@@ -241,9 +249,12 @@ namespace CpConsultorioMedico
 
             txtCedulaIdentidad.Text = paciente.cedulaIdentidad;
             txtPaciente.Text = paciente.nombreCompletoPaciente;
+            //mostrar fecha de nacimineto en editar
+            dtpFechaNacimiento.Value = paciente.fechaNacimiento ?? DateTime.Today;
             txtDireccion.Text = paciente.direccion;
             txtCelular.Text = paciente.celular.ToString();
             txtCedulaIdentidad.Focus();
+            
         }
 
 
@@ -262,6 +273,7 @@ namespace CpConsultorioMedico
             erpPaciente.SetError(txtPaciente, "");
             erpDireccion.SetError(txtDireccion, "");
             erpCelular.SetError(txtCelular, "");
+            erpFechaNacimiento.SetError(dtpFechaNacimiento, "");
 
             if (string.IsNullOrEmpty(txtCedulaIdentidad.Text))
             {
@@ -283,6 +295,18 @@ namespace CpConsultorioMedico
                 erpCelular.SetError(txtCelular, "El campo Celular es obligatorio o no tiene la longitud correcta");
                 esValido = false;
             }
+            // validacion por codigo para no poder celeccionar fechas a futuro 
+            if(dtpFechaNacimiento.Value.Date > DateTime.Today)
+{
+                MessageBox.Show(
+                    "La fecha de nacimiento no puede ser mayor a la fecha actual.",
+                    "Validación",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+
+                dtpFechaNacimiento.Focus();
+                esValido = false;
+            }
             return esValido;
         }
 
@@ -293,11 +317,24 @@ namespace CpConsultorioMedico
                 var paciente = new Paciente();
                 paciente.cedulaIdentidad = txtCedulaIdentidad.Text.Trim();
                 paciente.nombreCompletoPaciente = txtPaciente.Text.Trim();
+                paciente.fechaNacimiento = dtpFechaNacimiento.Value.Date;
                 paciente.direccion = txtDireccion.Text.Trim();
                 paciente.celular = Convert.ToInt32(txtCelular.Text);
                 paciente.usuarioRegistro = Util.usuario.usuario;
                 if (esNuevo)
                 {
+                    // verificacion si paciente con misma cedula ya existe
+
+                    if (PacienteCln.existeCedula(paciente.cedulaIdentidad))
+                    {
+                        MessageBox.Show(
+                            "Ya existe un paciente registrado con esta cédula de identidad.",
+                            "::: Consultorio Médico - BUENA SALUD :::",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning);
+                        return;
+                    }
+
                     paciente.fechaRegistro = DateTime.Now;
                     paciente.estado = 1;
                     PacienteCln.insertar(paciente);

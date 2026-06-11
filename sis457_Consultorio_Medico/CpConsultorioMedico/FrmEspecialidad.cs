@@ -115,6 +115,16 @@ namespace CpConsultorioMedico
                 especialidad.usuarioRegistro = Util.usuario.usuario;
                 if (esNuevo)
                 {
+                    // VARIFICACION SI YA EXSITE LA ESPECIALIDAD
+                    if (EspecialidadCln.existeNombre(especialidad.nombre))
+                    {
+                        MessageBox.Show(
+                            "Ya existe una especialidad registrada con ese nombre.",
+                            "::: Consultorio Médico - BUENA SALUD :::",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning);
+                        return;
+                    }
                     especialidad.fechaRegistro = DateTime.Now;
                     especialidad.estado = 1;
                     EspecialidadCln.insertar(especialidad);

@@ -58,6 +58,8 @@
             this.erpDireccion = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpCedulaIdentidad = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpCelular = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblFechaNacimiento = new System.Windows.Forms.Label();
+            this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.gbxLista.SuspendLayout();
             this.pnlAcciones.SuspendLayout();
@@ -226,6 +228,8 @@
             // 
             this.gbxDatos.BackColor = System.Drawing.Color.Transparent;
             this.gbxDatos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gbxDatos.BackgroundImage")));
+            this.gbxDatos.Controls.Add(this.dtpFechaNacimiento);
+            this.gbxDatos.Controls.Add(this.lblFechaNacimiento);
             this.gbxDatos.Controls.Add(this.btnCancelar);
             this.gbxDatos.Controls.Add(this.btnGuardar);
             this.gbxDatos.Controls.Add(this.txtDireccion);
@@ -379,6 +383,23 @@
             // 
             this.erpCelular.ContainerControl = this;
             // 
+            // lblFechaNacimiento
+            // 
+            this.lblFechaNacimiento.AutoSize = true;
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(625, 31);
+            this.lblFechaNacimiento.Name = "lblFechaNacimiento";
+            this.lblFechaNacimiento.Size = new System.Drawing.Size(235, 26);
+            this.lblFechaNacimiento.TabIndex = 61;
+            this.lblFechaNacimiento.Text = "Fecha de Nacimiento:";
+            // 
+            // dtpFechaNacimiento
+            // 
+            this.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(618, 61);
+            this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(200, 35);
+            this.dtpFechaNacimiento.TabIndex = 62;
+            // 
             // FrmPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -444,6 +465,8 @@
         private System.Windows.Forms.ErrorProvider erpDireccion;
         private System.Windows.Forms.ErrorProvider erpCedulaIdentidad;
         private System.Windows.Forms.ErrorProvider erpCelular;
+        private System.Windows.Forms.Label lblFechaNacimiento;
+        private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
     }
 }
 

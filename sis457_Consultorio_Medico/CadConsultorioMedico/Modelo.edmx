@@ -81,6 +81,7 @@
           <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
           <Property Name="estado" Type="smallint" Nullable="false" />
+          <Property Name="fechaNacimiento" Type="date" />
         </EntityType>
         <EntityType Name="Pago">
           <Key>
@@ -363,6 +364,7 @@
           <Property Name="estado" Type="Int16" Nullable="false" />
           <NavigationProperty Name="Cita" Relationship="Self.fk_Cita_Paciente" FromRole="Paciente" ToRole="Cita" />
           <NavigationProperty Name="HistorialClinico" Relationship="LabConsultorioMedicoModel.FK__Historial__idPac__48CFD27E" FromRole="Paciente" ToRole="HistorialClinico" />
+          <Property Name="fechaNacimiento" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="Pago">
           <Key>
@@ -595,6 +597,10 @@
           <Property Type="String" Name="nombreCompletoPaciente" Nullable="false" MaxLength="30" />
           <Property Type="String" Name="direccion" Nullable="false" MaxLength="250" />
           <Property Type="Int64" Name="celular" Nullable="false" />
+          <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
+          <Property Type="Int16" Name="estado" Nullable="false" />
+          <Property Type="DateTime" Name="fechaNacimiento" Nullable="true" />
         </ComplexType>
         <ComplexType Name="paPagoListar_Result">
           <Property Type="Int32" Name="id" Nullable="false" />
@@ -708,6 +714,7 @@
           <EntitySetMapping Name="Paciente">
             <EntityTypeMapping TypeName="LabConsultorioMedicoModel.Paciente">
               <MappingFragment StoreEntitySet="Paciente">
+                <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="cedulaIdentidad" ColumnName="cedulaIdentidad" />
                 <ScalarProperty Name="nombreCompletoPaciente" ColumnName="nombreCompletoPaciente" />
@@ -788,6 +795,10 @@
                 <ScalarProperty Name="nombreCompletoPaciente" ColumnName="nombreCompletoPaciente" />
                 <ScalarProperty Name="direccion" ColumnName="direccion" />
                 <ScalarProperty Name="celular" ColumnName="celular" />
+                <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
+                <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

@@ -27,6 +27,14 @@ public partial class paPacienteListar_Result
 
     public long celular { get; set; }
 
+    public string usuarioRegistro { get; set; }
+
+    public System.DateTime fechaRegistro { get; set; }
+
+    public short estado { get; set; }
+
+    public Nullable<System.DateTime> fechaNacimiento { get; set; }
+
 }
 
 }

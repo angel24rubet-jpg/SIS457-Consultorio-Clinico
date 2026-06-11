@@ -111,5 +111,16 @@ namespace ClnConsultorioMedico
                     .ToList();
             }
         }
+        // metodo que nos permite verificar si existe un doctor por cedula para evitar duplicados
+
+        public static bool existeCedula(string cedula)
+        {
+            using (var context = new LabConsultorioMedicoEntities())
+            {
+                return context.Doctor.Any(x =>
+                    x.cedulaIdentidad == cedula
+                    && x.estado != -1);
+            }
+        }
     }
 }
