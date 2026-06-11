@@ -238,6 +238,13 @@ namespace CpConsultorioMedico
                     reg.estado = -1;
                     reg.usuarioRegistro = Util.usuario?.usuario;
                     ctx.SaveChanges();
+
+                    MessageBox.Show(
+                        "Historial clínico dado de baja correctamente",
+                        "Información",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+
                 }
             }
 
@@ -339,6 +346,7 @@ namespace CpConsultorioMedico
                 var q = from h in ctx.HistorialClinico
                         join p in ctx.Paciente on h.idPaciente equals p.id into gj
                         from p in gj.DefaultIfEmpty()
+                        where h.estado != -1
                         select new { h, p };
 
                 if (idPaciente.HasValue)
