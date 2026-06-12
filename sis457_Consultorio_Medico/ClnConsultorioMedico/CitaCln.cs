@@ -54,8 +54,11 @@ namespace ClnConsultorioMedico
         {
             using (var context = new LabConsultorioMedicoEntities())
             {
-                // Obtener todas las filas del procedimiento y luego filtrar en memoria si se proporciona parámetro.
-                var todas = context.paCitaListar().ToList();
+                // orden de la lista de citas por fecha y hora
+                var todas = context.paCitaListar()
+                   .OrderByDescending(x => x.fecha)
+                   .ThenByDescending(x => x.hora)
+                   .ToList();
 
                 if (string.IsNullOrWhiteSpace(parametro))
                 {

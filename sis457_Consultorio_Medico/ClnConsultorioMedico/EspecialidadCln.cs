@@ -53,8 +53,10 @@ namespace ClnConsultorioMedico
         {
             using (var context = new LabConsultorioMedicoEntities())
             {
-                // Llamada al SP sin parámetros (modelo generado sin sobrecarga)
-                var lista = context.paEspecialidadListar().ToList();
+                // invertimos el orden del listado
+                var lista = context.paEspecialidadListar()
+                          .OrderByDescending(x => x.id)
+                          .ToList();
 
                 if (string.IsNullOrWhiteSpace(parametro))
                 {

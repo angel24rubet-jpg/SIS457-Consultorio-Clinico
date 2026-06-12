@@ -74,8 +74,10 @@ namespace ClnConsultorioMedico
         {
             using (var context = new LabConsultorioMedicoEntities())
             {
-                // Llamada a la función generada sin parámetros
-                var lista = context.paDoctorListar().ToList();
+                // ordenamos de manera descendente el listado
+                var lista = context.paDoctorListar()
+                  .OrderByDescending(x => x.id)
+                  .ToList();
 
                 if (string.IsNullOrWhiteSpace(parametro))
                 {
