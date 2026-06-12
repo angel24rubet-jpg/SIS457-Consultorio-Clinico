@@ -65,13 +65,14 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuscar.BackgroundImage")));
+            this.btnBuscar.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = global::CpConsultorioMedico.Properties.Resources.Buscar;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(385, 118);
+            this.btnBuscar.Location = new System.Drawing.Point(697, 251);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.btnBuscar.Size = new System.Drawing.Size(98, 40);
+            this.btnBuscar.Size = new System.Drawing.Size(129, 40);
             this.btnBuscar.TabIndex = 22;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -80,7 +81,7 @@
             // txtParametro
             // 
             this.txtParametro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtParametro.Location = new System.Drawing.Point(225, 129);
+            this.txtParametro.Location = new System.Drawing.Point(523, 263);
             this.txtParametro.MaxLength = 100;
             this.txtParametro.Name = "txtParametro";
             this.txtParametro.Size = new System.Drawing.Size(154, 22);
@@ -91,7 +92,7 @@
             this.lblParametro.AutoSize = true;
             this.lblParametro.BackColor = System.Drawing.Color.Transparent;
             this.lblParametro.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblParametro.Location = new System.Drawing.Point(12, 128);
+            this.lblParametro.Location = new System.Drawing.Point(310, 263);
             this.lblParametro.Name = "lblParametro";
             this.lblParametro.Size = new System.Drawing.Size(207, 22);
             this.lblParametro.TabIndex = 20;
@@ -100,11 +101,11 @@
             // lblTitulo
             // 
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitulo.Font = new System.Drawing.Font("Times New Roman", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Font = new System.Drawing.Font("Times New Roman", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(295, 9);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(957, 85);
+            this.lblTitulo.Size = new System.Drawing.Size(957, 219);
             this.lblTitulo.TabIndex = 19;
             this.lblTitulo.Text = "HISTORIAL  CLINICO";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -112,7 +113,7 @@
             // txtFPaciente
             // 
             this.txtFPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFPaciente.Location = new System.Drawing.Point(896, 132);
+            this.txtFPaciente.Location = new System.Drawing.Point(1051, 262);
             this.txtFPaciente.MaxLength = 100;
             this.txtFPaciente.Name = "txtFPaciente";
             this.txtFPaciente.Size = new System.Drawing.Size(242, 22);
@@ -123,7 +124,7 @@
             this.lblFPaciente.AutoSize = true;
             this.lblFPaciente.BackColor = System.Drawing.Color.Transparent;
             this.lblFPaciente.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFPaciente.Location = new System.Drawing.Point(695, 131);
+            this.lblFPaciente.Location = new System.Drawing.Point(860, 262);
             this.lblFPaciente.Name = "lblFPaciente";
             this.lblFPaciente.Size = new System.Drawing.Size(185, 22);
             this.lblFPaciente.TabIndex = 24;
@@ -134,9 +135,9 @@
             this.gbxLista.BackColor = System.Drawing.Color.Transparent;
             this.gbxLista.Controls.Add(this.dgvLista);
             this.gbxLista.Font = new System.Drawing.Font("Times New Roman", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxLista.Location = new System.Drawing.Point(301, 611);
+            this.gbxLista.Location = new System.Drawing.Point(41, 648);
             this.gbxLista.Name = "gbxLista";
-            this.gbxLista.Size = new System.Drawing.Size(864, 234);
+            this.gbxLista.Size = new System.Drawing.Size(1542, 337);
             this.gbxLista.TabIndex = 25;
             this.gbxLista.TabStop = false;
             this.gbxLista.Text = "Entradas del Historial:";
@@ -152,31 +153,32 @@
             this.dgvLista.Name = "dgvLista";
             this.dgvLista.ReadOnly = true;
             this.dgvLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLista.Size = new System.Drawing.Size(851, 204);
+            this.dgvLista.Size = new System.Drawing.Size(1536, 293);
             this.dgvLista.TabIndex = 0;
             // 
             // pnlAcciones
             // 
-            this.pnlAcciones.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pnlAcciones.BackColor = System.Drawing.Color.Transparent;
             this.pnlAcciones.Controls.Add(this.btnCerrar);
             this.pnlAcciones.Controls.Add(this.btnEliminar);
             this.pnlAcciones.Controls.Add(this.btnEditar);
             this.pnlAcciones.Controls.Add(this.btnNuevo);
             this.pnlAcciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlAcciones.Location = new System.Drawing.Point(19, 205);
+            this.pnlAcciones.Location = new System.Drawing.Point(12, 290);
             this.pnlAcciones.Name = "pnlAcciones";
-            this.pnlAcciones.Size = new System.Drawing.Size(252, 378);
+            this.pnlAcciones.Size = new System.Drawing.Size(282, 331);
             this.pnlAcciones.TabIndex = 26;
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.BackgroundImage")));
+            this.btnCerrar.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.Image = global::CpConsultorioMedico.Properties.Resources.Cerrar;
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrar.Location = new System.Drawing.Point(20, 298);
+            this.btnCerrar.Location = new System.Drawing.Point(20, 235);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
-            this.btnCerrar.Size = new System.Drawing.Size(180, 45);
+            this.btnCerrar.Size = new System.Drawing.Size(187, 63);
             this.btnCerrar.TabIndex = 9;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -184,13 +186,14 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.BackgroundImage")));
+            this.btnEliminar.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = global::CpConsultorioMedico.Properties.Resources.Eliminar;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(20, 202);
+            this.btnEliminar.Location = new System.Drawing.Point(20, 165);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.btnEliminar.Size = new System.Drawing.Size(203, 45);
+            this.btnEliminar.Size = new System.Drawing.Size(237, 64);
             this.btnEliminar.TabIndex = 8;
             this.btnEliminar.Text = "Eliminar Entrada\r\n";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -198,13 +201,14 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEditar.BackgroundImage")));
+            this.btnEditar.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Image = global::CpConsultorioMedico.Properties.Resources.Editar;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(20, 107);
+            this.btnEditar.Location = new System.Drawing.Point(20, 95);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnEditar.Size = new System.Drawing.Size(203, 45);
+            this.btnEditar.Size = new System.Drawing.Size(237, 64);
             this.btnEditar.TabIndex = 7;
             this.btnEditar.Text = "Editar Entrada\r\n";
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -212,13 +216,14 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevo.BackgroundImage")));
+            this.btnNuevo.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.Image = global::CpConsultorioMedico.Properties.Resources.Añadir;
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNuevo.Location = new System.Drawing.Point(20, 20);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnNuevo.Size = new System.Drawing.Size(203, 45);
+            this.btnNuevo.Size = new System.Drawing.Size(237, 68);
             this.btnNuevo.TabIndex = 6;
             this.btnNuevo.Text = "Nueva Entrada\r\n";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -230,7 +235,7 @@
             this.lblFFecha.AutoSize = true;
             this.lblFFecha.BackColor = System.Drawing.Color.Transparent;
             this.lblFFecha.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFFecha.Location = new System.Drawing.Point(470, 175);
+            this.lblFFecha.Location = new System.Drawing.Point(1366, 222);
             this.lblFFecha.Name = "lblFFecha";
             this.lblFFecha.Size = new System.Drawing.Size(152, 22);
             this.lblFFecha.TabIndex = 27;
@@ -239,7 +244,7 @@
             // dtpFFecha
             // 
             this.dtpFFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFFecha.Location = new System.Drawing.Point(637, 174);
+            this.dtpFFecha.Location = new System.Drawing.Point(1336, 260);
             this.dtpFFecha.Name = "dtpFFecha";
             this.dtpFFecha.Size = new System.Drawing.Size(218, 22);
             this.dtpFFecha.TabIndex = 28;
@@ -261,22 +266,23 @@
             this.gbxDatos.Controls.Add(this.lblPaciente);
             this.gbxDatos.Controls.Add(this.txtPaciente);
             this.gbxDatos.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxDatos.Location = new System.Drawing.Point(307, 208);
+            this.gbxDatos.Location = new System.Drawing.Point(300, 308);
             this.gbxDatos.Name = "gbxDatos";
-            this.gbxDatos.Size = new System.Drawing.Size(864, 384);
+            this.gbxDatos.Size = new System.Drawing.Size(1145, 313);
             this.gbxDatos.TabIndex = 61;
             this.gbxDatos.TabStop = false;
             this.gbxDatos.Text = "DATOS";
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGuardar.BackgroundImage")));
+            this.btnGuardar.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Image = global::CpConsultorioMedico.Properties.Resources.Guardar;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(731, 267);
+            this.btnGuardar.Location = new System.Drawing.Point(983, 121);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.btnGuardar.Size = new System.Drawing.Size(127, 40);
+            this.btnGuardar.Size = new System.Drawing.Size(152, 59);
             this.btnGuardar.TabIndex = 70;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -284,13 +290,14 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancelar.BackgroundImage")));
+            this.btnCancelar.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = global::CpConsultorioMedico.Properties.Resources.Cancelar;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(731, 338);
+            this.btnCancelar.Location = new System.Drawing.Point(983, 208);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.btnCancelar.Size = new System.Drawing.Size(127, 40);
+            this.btnCancelar.Size = new System.Drawing.Size(152, 57);
             this.btnCancelar.TabIndex = 71;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -299,10 +306,10 @@
             // txtTratamiento
             // 
             this.txtTratamiento.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTratamiento.Location = new System.Drawing.Point(283, 227);
+            this.txtTratamiento.Location = new System.Drawing.Point(330, 227);
             this.txtTratamiento.Multiline = true;
             this.txtTratamiento.Name = "txtTratamiento";
-            this.txtTratamiento.Size = new System.Drawing.Size(305, 31);
+            this.txtTratamiento.Size = new System.Drawing.Size(602, 68);
             this.txtTratamiento.TabIndex = 81;
             // 
             // lblTratamiento
@@ -310,7 +317,7 @@
             this.lblTratamiento.AutoSize = true;
             this.lblTratamiento.BackColor = System.Drawing.Color.Transparent;
             this.lblTratamiento.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTratamiento.Location = new System.Drawing.Point(14, 232);
+            this.lblTratamiento.Location = new System.Drawing.Point(115, 227);
             this.lblTratamiento.Name = "lblTratamiento";
             this.lblTratamiento.Size = new System.Drawing.Size(116, 22);
             this.lblTratamiento.TabIndex = 80;
@@ -319,19 +326,19 @@
             // txtDiagnostico
             // 
             this.txtDiagnostico.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiagnostico.Location = new System.Drawing.Point(283, 287);
+            this.txtDiagnostico.Location = new System.Drawing.Point(330, 158);
             this.txtDiagnostico.Multiline = true;
             this.txtDiagnostico.Name = "txtDiagnostico";
-            this.txtDiagnostico.Size = new System.Drawing.Size(282, 41);
+            this.txtDiagnostico.Size = new System.Drawing.Size(602, 63);
             this.txtDiagnostico.TabIndex = 79;
             // 
             // cbxDoctor
             // 
             this.cbxDoctor.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxDoctor.FormattingEnabled = true;
-            this.cbxDoctor.Location = new System.Drawing.Point(283, 170);
+            this.cbxDoctor.Location = new System.Drawing.Point(330, 117);
             this.cbxDoctor.Name = "cbxDoctor";
-            this.cbxDoctor.Size = new System.Drawing.Size(217, 27);
+            this.cbxDoctor.Size = new System.Drawing.Size(282, 27);
             this.cbxDoctor.TabIndex = 78;
             // 
             // lblDoctor
@@ -339,7 +346,7 @@
             this.lblDoctor.AutoSize = true;
             this.lblDoctor.BackColor = System.Drawing.Color.Transparent;
             this.lblDoctor.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDoctor.Location = new System.Drawing.Point(20, 169);
+            this.lblDoctor.Location = new System.Drawing.Point(115, 122);
             this.lblDoctor.Name = "lblDoctor";
             this.lblDoctor.Size = new System.Drawing.Size(72, 22);
             this.lblDoctor.TabIndex = 77;
@@ -349,7 +356,7 @@
             // 
             this.cbxEspecialidad.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxEspecialidad.FormattingEnabled = true;
-            this.cbxEspecialidad.Location = new System.Drawing.Point(283, 113);
+            this.cbxEspecialidad.Location = new System.Drawing.Point(330, 74);
             this.cbxEspecialidad.Name = "cbxEspecialidad";
             this.cbxEspecialidad.Size = new System.Drawing.Size(164, 27);
             this.cbxEspecialidad.TabIndex = 76;
@@ -359,7 +366,7 @@
             this.lblEspecialidad.AutoSize = true;
             this.lblEspecialidad.BackColor = System.Drawing.Color.Transparent;
             this.lblEspecialidad.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEspecialidad.Location = new System.Drawing.Point(20, 115);
+            this.lblEspecialidad.Location = new System.Drawing.Point(115, 79);
             this.lblEspecialidad.Name = "lblEspecialidad";
             this.lblEspecialidad.Size = new System.Drawing.Size(119, 22);
             this.lblEspecialidad.TabIndex = 75;
@@ -370,7 +377,7 @@
             this.lblDiagnostico.AutoSize = true;
             this.lblDiagnostico.BackColor = System.Drawing.Color.Transparent;
             this.lblDiagnostico.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiagnostico.Location = new System.Drawing.Point(18, 306);
+            this.lblDiagnostico.Location = new System.Drawing.Point(115, 158);
             this.lblDiagnostico.Name = "lblDiagnostico";
             this.lblDiagnostico.Size = new System.Drawing.Size(112, 22);
             this.lblDiagnostico.TabIndex = 74;
@@ -381,7 +388,7 @@
             this.lblPaciente.AutoSize = true;
             this.lblPaciente.BackColor = System.Drawing.Color.Transparent;
             this.lblPaciente.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaciente.Location = new System.Drawing.Point(18, 54);
+            this.lblPaciente.Location = new System.Drawing.Point(115, 35);
             this.lblPaciente.Name = "lblPaciente";
             this.lblPaciente.Size = new System.Drawing.Size(185, 22);
             this.lblPaciente.TabIndex = 73;
@@ -390,10 +397,10 @@
             // txtPaciente
             // 
             this.txtPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPaciente.Location = new System.Drawing.Point(283, 54);
+            this.txtPaciente.Location = new System.Drawing.Point(330, 36);
             this.txtPaciente.MaxLength = 100;
             this.txtPaciente.Name = "txtPaciente";
-            this.txtPaciente.Size = new System.Drawing.Size(291, 22);
+            this.txtPaciente.Size = new System.Drawing.Size(389, 22);
             this.txtPaciente.TabIndex = 72;
             // 
             // FrmHistorial
@@ -402,7 +409,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1245, 841);
+            this.ClientSize = new System.Drawing.Size(1618, 960);
             this.Controls.Add(this.gbxDatos);
             this.Controls.Add(this.dtpFFecha);
             this.Controls.Add(this.lblFFecha);

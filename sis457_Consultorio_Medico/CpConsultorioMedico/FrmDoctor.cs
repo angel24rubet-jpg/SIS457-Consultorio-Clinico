@@ -243,5 +243,10 @@ namespace CpConsultorioMedico
         {
 
         }
+
+        private void pnlAcciones_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

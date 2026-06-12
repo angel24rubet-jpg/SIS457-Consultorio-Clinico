@@ -86,5 +86,15 @@ namespace CpConsultorioMedico
             if (e.KeyChar == (char)Keys.Enter)
                 btnIngresar.PerformClick();
         }
+
+        private void lblAgregarEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

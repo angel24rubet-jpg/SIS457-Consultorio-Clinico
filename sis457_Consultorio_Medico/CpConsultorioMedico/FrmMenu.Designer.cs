@@ -45,12 +45,13 @@
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Padding = new System.Windows.Forms.Padding(5);
-            this.panelMenu.Size = new System.Drawing.Size(305, 700);
+            this.panelMenu.Size = new System.Drawing.Size(305, 866);
             this.panelMenu.TabIndex = 1;
             // 
             // btnAyuda
             // 
             this.btnAyuda.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnAyuda.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAyuda.BackgroundImage")));
             this.btnAyuda.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAyuda.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAyuda.Location = new System.Drawing.Point(5, 682);
@@ -63,7 +64,8 @@
             // 
             // btnReportes
             // 
-            this.btnReportes.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnReportes.BackColor = System.Drawing.Color.Azure;
+            this.btnReportes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReportes.BackgroundImage")));
             this.btnReportes.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnReportes.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportes.Location = new System.Drawing.Point(5, 593);
@@ -77,6 +79,7 @@
             // btnConcepto
             // 
             this.btnConcepto.BackColor = System.Drawing.Color.Azure;
+            this.btnConcepto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConcepto.BackgroundImage")));
             this.btnConcepto.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnConcepto.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConcepto.Location = new System.Drawing.Point(5, 495);
@@ -165,13 +168,13 @@
             this.panelContenido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenido.Location = new System.Drawing.Point(305, 0);
             this.panelContenido.Name = "panelContenido";
-            this.panelContenido.Size = new System.Drawing.Size(958, 700);
+            this.panelContenido.Size = new System.Drawing.Size(958, 866);
             this.panelContenido.TabIndex = 0;
             this.panelContenido.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenido_Paint);
             // 
             // FrmMenu
             // 
-            this.ClientSize = new System.Drawing.Size(1263, 700);
+            this.ClientSize = new System.Drawing.Size(1263, 866);
             this.Controls.Add(this.panelContenido);
             this.Controls.Add(this.panelMenu);
             this.Name = "FrmMenu";
