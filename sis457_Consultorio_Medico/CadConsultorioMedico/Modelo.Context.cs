@@ -51,6 +51,8 @@ public partial class LabConsultorioMedicoEntities : DbContext
 
     public virtual DbSet<Usuario> Usuario { get; set; }
 
+    public virtual DbSet<Receta> Receta { get; set; }
+
 
     public virtual ObjectResult<paCitaListar_Result> paCitaListar()
     {
@@ -137,6 +139,13 @@ public partial class LabConsultorioMedicoEntities : DbContext
 
 
         return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paReporteCitasPorFecha1_Result>("paReporteCitasPorFecha1", fechaInicioParameter, fechaFinParameter);
+    }
+
+
+    public virtual ObjectResult<paRecetaListar_Result> paRecetaListar()
+    {
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paRecetaListar_Result>("paRecetaListar");
     }
 
 }

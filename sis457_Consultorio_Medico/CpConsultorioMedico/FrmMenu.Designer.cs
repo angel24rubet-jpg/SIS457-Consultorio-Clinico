@@ -16,6 +16,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
+            this.panelContenido = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnAyuda = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
@@ -25,14 +26,27 @@
             this.btnEspecialidades = new System.Windows.Forms.Button();
             this.btnDoctores = new System.Windows.Forms.Button();
             this.btnPacientes = new System.Windows.Forms.Button();
-            this.panelContenido = new System.Windows.Forms.Panel();
+            this.btnRecetas = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panelContenido
+            // 
+            this.panelContenido.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelContenido.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelContenido.BackgroundImage")));
+            this.panelContenido.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelContenido.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenido.Location = new System.Drawing.Point(305, 0);
+            this.panelContenido.Name = "panelContenido";
+            this.panelContenido.Size = new System.Drawing.Size(958, 866);
+            this.panelContenido.TabIndex = 0;
+            this.panelContenido.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenido_Paint);
             // 
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.LightSteelBlue;
             this.panelMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelMenu.BackgroundImage")));
+            this.panelMenu.Controls.Add(this.btnRecetas);
             this.panelMenu.Controls.Add(this.btnAyuda);
             this.panelMenu.Controls.Add(this.btnReportes);
             this.panelMenu.Controls.Add(this.btnConcepto);
@@ -160,17 +174,19 @@
             this.btnPacientes.UseVisualStyleBackColor = false;
             this.btnPacientes.Click += new System.EventHandler(this.btnPacientes_Click);
             // 
-            // panelContenido
+            // btnRecetas
             // 
-            this.panelContenido.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panelContenido.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelContenido.BackgroundImage")));
-            this.panelContenido.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelContenido.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenido.Location = new System.Drawing.Point(305, 0);
-            this.panelContenido.Name = "panelContenido";
-            this.panelContenido.Size = new System.Drawing.Size(958, 866);
-            this.panelContenido.TabIndex = 0;
-            this.panelContenido.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenido_Paint);
+            this.btnRecetas.BackColor = System.Drawing.Color.Azure;
+            this.btnRecetas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRecetas.BackgroundImage")));
+            this.btnRecetas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRecetas.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecetas.Location = new System.Drawing.Point(5, 779);
+            this.btnRecetas.Name = "btnRecetas";
+            this.btnRecetas.Size = new System.Drawing.Size(295, 89);
+            this.btnRecetas.TabIndex = 8;
+            this.btnRecetas.Text = "RECETAS";
+            this.btnRecetas.UseVisualStyleBackColor = false;
+            this.btnRecetas.Click += new System.EventHandler(this.btnRecetas_Click);
             // 
             // FrmMenu
             // 
@@ -199,5 +215,6 @@
         private System.Windows.Forms.Button btnConcepto;
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Button btnAyuda;
+        private System.Windows.Forms.Button btnRecetas;
     }
 }

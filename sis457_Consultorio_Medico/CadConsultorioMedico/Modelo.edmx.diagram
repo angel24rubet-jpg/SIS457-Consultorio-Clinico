@@ -22,6 +22,8 @@
         <AssociationConnector Association="LabConsultorioMedicoModel.fk_Doctor_Especialidad" ManuallyRouted="false" />
         <AssociationConnector Association="LabConsultorioMedicoModel.fk_Usuario_Doctor" ManuallyRouted="false" />
         <AssociationConnector Association="LabConsultorioMedicoModel.FK__Historial__idPac__48CFD27E" />
+        <EntityTypeShape EntityType="LabConsultorioMedicoModel.Receta" Width="1.5" PointX="8" PointY="1" />
+        <AssociationConnector Association="LabConsultorioMedicoModel.FK_Receta_HistorialClinico" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

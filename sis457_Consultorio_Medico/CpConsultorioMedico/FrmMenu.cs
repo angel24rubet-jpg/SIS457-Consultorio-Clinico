@@ -75,5 +75,10 @@ namespace CpConsultorioMedico
         {
 
         }
+         // boton que nos permite ingresar a recetas
+        private void btnRecetas_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioEnPanel(new FrmReceta());
+        }
     }
 }
