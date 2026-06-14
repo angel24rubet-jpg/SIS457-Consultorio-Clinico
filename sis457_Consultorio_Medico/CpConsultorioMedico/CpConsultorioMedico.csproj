@@ -334,6 +334,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="consultorio.ico" />
+    <None Include="Resources\nuevi.png" />
     <None Include="Resources\pagos.jpeg" />
     <None Include="Resources\espefondo2.jpeg" />
     <None Include="Resources\list.jpeg" />

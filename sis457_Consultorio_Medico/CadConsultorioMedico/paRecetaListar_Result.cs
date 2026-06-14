@@ -35,6 +35,8 @@ public partial class paRecetaListar_Result
 
     public short estado { get; set; }
 
+    public int idHistorialClinico { get; set; }
+
 }
 
 }

@@ -710,6 +710,7 @@
           <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
           <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
           <Property Type="Int16" Name="estado" Nullable="false" />
+          <Property Type="Int32" Name="idHistorialClinico" Nullable="false" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -927,6 +928,7 @@
                 <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
                 <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
                 <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="idHistorialClinico" ColumnName="idHistorialClinico" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
