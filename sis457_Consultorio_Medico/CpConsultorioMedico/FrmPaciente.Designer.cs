@@ -355,7 +355,7 @@
             // txtPaciente
             // 
             this.txtPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPaciente.Location = new System.Drawing.Point(390, 34);
+            this.txtPaciente.Location = new System.Drawing.Point(390, 71);
             this.txtPaciente.MaxLength = 100;
             this.txtPaciente.Name = "txtPaciente";
             this.txtPaciente.Size = new System.Drawing.Size(401, 26);
@@ -366,7 +366,7 @@
             this.lblPaciente.AutoSize = true;
             this.lblPaciente.BackColor = System.Drawing.Color.Transparent;
             this.lblPaciente.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaciente.Location = new System.Drawing.Point(100, 35);
+            this.lblPaciente.Location = new System.Drawing.Point(100, 71);
             this.lblPaciente.Name = "lblPaciente";
             this.lblPaciente.Size = new System.Drawing.Size(165, 22);
             this.lblPaciente.TabIndex = 50;
@@ -375,7 +375,7 @@
             // txtCedulaIdentidad
             // 
             this.txtCedulaIdentidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCedulaIdentidad.Location = new System.Drawing.Point(390, 80);
+            this.txtCedulaIdentidad.Location = new System.Drawing.Point(390, 27);
             this.txtCedulaIdentidad.MaxLength = 100;
             this.txtCedulaIdentidad.Name = "txtCedulaIdentidad";
             this.txtCedulaIdentidad.Size = new System.Drawing.Size(261, 26);
@@ -386,7 +386,7 @@
             this.lblCedulaIdentidad.AutoSize = true;
             this.lblCedulaIdentidad.BackColor = System.Drawing.Color.Transparent;
             this.lblCedulaIdentidad.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCedulaIdentidad.Location = new System.Drawing.Point(100, 80);
+            this.lblCedulaIdentidad.Location = new System.Drawing.Point(100, 31);
             this.lblCedulaIdentidad.Name = "lblCedulaIdentidad";
             this.lblCedulaIdentidad.Size = new System.Drawing.Size(177, 22);
             this.lblCedulaIdentidad.TabIndex = 48;

@@ -43,12 +43,12 @@ namespace CpConsultorioMedico
         protected override void OnResize(EventArgs e)
         {
             base.OnResize(e);
-            centrarPanel();
+           // centrarPanel();
         }
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
-            centrarPanel();
+           // centrarPanel();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

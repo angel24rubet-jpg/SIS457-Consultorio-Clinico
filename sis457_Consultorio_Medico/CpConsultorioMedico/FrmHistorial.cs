@@ -350,7 +350,7 @@ namespace CpConsultorioMedico
                     q = q.Where(x => DbFunctions.TruncateTime(x.h.fecha) == d);
                 }
 
-                var lista = q.OrderByDescending(x => x.h.fecha)
+                var lista = q.OrderByDescending(x => x.h.id)
                              .Select(x => new
                              {
                                  x.h.id,

@@ -414,29 +414,39 @@ namespace CpConsultorioMedico
         // FORMULARIO
         private void Pd_PrintPage(object sender, PrintPageEventArgs e)
         {
-            Font titulo = new Font("Arial", 16, FontStyle.Bold);
+            Font titulo = new Font("Arial", 18, FontStyle.Bold);
+            Font subtitulo = new Font("Arial", 12, FontStyle.Bold);
             Font texto = new Font("Arial", 11);
 
-            int y = 50;
+            StringFormat centro = new StringFormat();
+            centro.Alignment = StringAlignment.Center;
 
+            int y = 30;
+
+            // ENCABEZADO
             e.Graphics.DrawString(
-             "CONSULTORIO CLINICO BUENA SALUD ",
-             titulo,
-             Brushes.Black,
-             250,
-             y);
-
-            y += 50;
-
-            e.Graphics.DrawString(
-                "RECETA MÉDICA ",
+                "CONSULTORIO CLÍNICO BUENA SALUD",
                 titulo,
+                Brushes.DarkBlue,
+                new RectangleF(0, y, 800, 40),
+                centro);
+
+            y += 40;
+
+            e.Graphics.DrawString(
+                "RECETA MÉDICA",
+                subtitulo,
                 Brushes.Black,
-                250,
-                y);
+                new RectangleF(0, y, 800, 30),
+                centro);
 
-            y += 50;
+            y += 40;
 
+            e.Graphics.DrawLine(Pens.Black, 50, y, 750, y);
+
+            y += 20;
+
+            // DATOS DEL PACIENTE
             e.Graphics.DrawString(
                 "Paciente: " + recetaPaciente,
                 texto,
@@ -444,11 +454,23 @@ namespace CpConsultorioMedico
                 50,
                 y);
 
-            y += 40;
-
             e.Graphics.DrawString(
-                "Medicamentos:",
+                "Fecha: " + DateTime.Now.ToString("dd/MM/yyyy"),
                 texto,
+                Brushes.Black,
+                550,
+                y);
+
+            y += 35;
+
+            e.Graphics.DrawLine(Pens.Gray, 50, y, 750, y);
+
+            y += 25;
+
+            // MEDICAMENTOS
+            e.Graphics.DrawString(
+                "MEDICAMENTOS",
+                subtitulo,
                 Brushes.Black,
                 50,
                 y);
@@ -456,17 +478,18 @@ namespace CpConsultorioMedico
             y += 30;
 
             e.Graphics.DrawString(
-                recetaMedicamentos,
+                "• " + recetaMedicamentos,
                 texto,
                 Brushes.Black,
                 70,
                 y);
 
-            y += 60;
+            y += 50;
 
+            // DOSIS
             e.Graphics.DrawString(
-                "Dosis:",
-                texto,
+                "DOSIS",
+                subtitulo,
                 Brushes.Black,
                 50,
                 y);
@@ -480,11 +503,12 @@ namespace CpConsultorioMedico
                 70,
                 y);
 
-            y += 60;
+            y += 50;
 
+            // INDICACIONES
             e.Graphics.DrawString(
-                "Indicaciones:",
-                texto,
+                "INDICACIONES",
+                subtitulo,
                 Brushes.Black,
                 50,
                 y);
@@ -498,22 +522,23 @@ namespace CpConsultorioMedico
                 70,
                 y);
 
-            y += 120;
+            // FIRMA
+            y += 150;
 
-            e.Graphics.DrawString(
-                "________________________",
-                texto,
-                Brushes.Black,
-                200,
+            e.Graphics.DrawLine(
+                Pens.Black,
+                500,
+                y,
+                700,
                 y);
 
-            y += 25;
+            y += 10;
 
             e.Graphics.DrawString(
                 "Firma y Sello Médico",
                 texto,
                 Brushes.Black,
-                215,
+                535,
                 y);
         }
 

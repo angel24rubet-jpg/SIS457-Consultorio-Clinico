@@ -18,6 +18,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
             this.panelContenido = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnRecetas = new System.Windows.Forms.Button();
             this.btnAyuda = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
             this.btnConcepto = new System.Windows.Forms.Button();
@@ -26,7 +27,6 @@
             this.btnEspecialidades = new System.Windows.Forms.Button();
             this.btnDoctores = new System.Windows.Forms.Button();
             this.btnPacientes = new System.Windows.Forms.Button();
-            this.btnRecetas = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +61,20 @@
             this.panelMenu.Padding = new System.Windows.Forms.Padding(5);
             this.panelMenu.Size = new System.Drawing.Size(305, 866);
             this.panelMenu.TabIndex = 1;
+            // 
+            // btnRecetas
+            // 
+            this.btnRecetas.BackColor = System.Drawing.Color.Azure;
+            this.btnRecetas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRecetas.BackgroundImage")));
+            this.btnRecetas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRecetas.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecetas.Location = new System.Drawing.Point(5, 779);
+            this.btnRecetas.Name = "btnRecetas";
+            this.btnRecetas.Size = new System.Drawing.Size(295, 87);
+            this.btnRecetas.TabIndex = 8;
+            this.btnRecetas.Text = "RECETAS";
+            this.btnRecetas.UseVisualStyleBackColor = false;
+            this.btnRecetas.Click += new System.EventHandler(this.btnRecetas_Click);
             // 
             // btnAyuda
             // 
@@ -173,20 +187,6 @@
             this.btnPacientes.Text = "PACIENTE";
             this.btnPacientes.UseVisualStyleBackColor = false;
             this.btnPacientes.Click += new System.EventHandler(this.btnPacientes_Click);
-            // 
-            // btnRecetas
-            // 
-            this.btnRecetas.BackColor = System.Drawing.Color.Azure;
-            this.btnRecetas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRecetas.BackgroundImage")));
-            this.btnRecetas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRecetas.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRecetas.Location = new System.Drawing.Point(5, 779);
-            this.btnRecetas.Name = "btnRecetas";
-            this.btnRecetas.Size = new System.Drawing.Size(295, 89);
-            this.btnRecetas.TabIndex = 8;
-            this.btnRecetas.Text = "RECETAS";
-            this.btnRecetas.UseVisualStyleBackColor = false;
-            this.btnRecetas.Click += new System.EventHandler(this.btnRecetas_Click);
             // 
             // FrmMenu
             // 
