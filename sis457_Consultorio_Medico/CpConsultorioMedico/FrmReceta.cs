@@ -516,5 +516,15 @@ namespace CpConsultorioMedico
                 215,
                 y);
         }
+
+        private void txtPaciente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

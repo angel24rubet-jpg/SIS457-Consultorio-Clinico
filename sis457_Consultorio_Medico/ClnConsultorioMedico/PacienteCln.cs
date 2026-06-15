@@ -36,14 +36,53 @@ namespace ClnConsultorioMedico
                 return context.SaveChanges();
             }
         }
-
+        // eliminacion logica en cascada
         public static int eliminar(int id, string usuarioRegistro)
         {
             using (var context = new LabConsultorioMedicoEntities())
             {
-                var existente = context.Paciente.Find(id);
-                existente.estado = -1;
-                existente.usuarioRegistro = usuarioRegistro;
+                // Paciente
+                var paciente = context.Paciente.Find(id);
+
+                if (paciente == null)
+                    return 0;
+
+                paciente.estado = -1;
+                paciente.usuarioRegistro = usuarioRegistro;
+
+                // Citas del paciente
+                var citas = context.Cita
+                    .Where(c => c.idPaciente == id)
+                    .ToList();
+
+                foreach (var cita in citas)
+                {
+                    cita.estado = -1;
+                    cita.usuarioRegistro = usuarioRegistro;
+                }
+
+                // Historiales del paciente
+                var historiales = context.HistorialClinico
+                    .Where(h => h.idPaciente == id)
+                    .ToList();
+
+                foreach (var historial in historiales)
+                {
+                    historial.estado = -1;
+                    historial.usuarioRegistro = usuarioRegistro;
+
+                    // Recetas del historial
+                    var recetas = context.Receta
+                        .Where(r => r.idHistorialClinico == historial.id)
+                        .ToList();
+
+                    foreach (var receta in recetas)
+                    {
+                        receta.estado = -1;
+                        receta.usuarioRegistro = usuarioRegistro;
+                    }
+                }
+
                 return context.SaveChanges();
             }
         }

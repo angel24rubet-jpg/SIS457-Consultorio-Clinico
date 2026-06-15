@@ -229,24 +229,16 @@ namespace CpConsultorioMedico
 
             var dialog = MessageBox.Show("¿Está seguro de eliminar la entrada seleccionada?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialog != DialogResult.Yes) return;
+             // eliminacion logica 
+            HistorialClinicoCln.eliminar(
+                id,
+                Util.usuario?.usuario);
 
-            using (var ctx = new LabConsultorioMedicoEntities())
-            {
-                var reg = ctx.HistorialClinico.Find(id);
-                if (reg != null)
-                {
-                    reg.estado = -1;
-                    reg.usuarioRegistro = Util.usuario?.usuario;
-                    ctx.SaveChanges();
-
-                    MessageBox.Show(
+            MessageBox.Show(
                         "Historial clínico dado de baja correctamente",
                         "Información",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
-
-                }
-            }
 
             CargarHistorial();
         }

@@ -38,11 +38,11 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.gbxDatos = new System.Windows.Forms.GroupBox();
-            this.lblEspecialidad = new System.Windows.Forms.Label();
-            this.txtEspecialidad = new System.Windows.Forms.TextBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.lblEspecialidad = new System.Windows.Forms.Label();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.txtEspecialidad = new System.Windows.Forms.TextBox();
+            this.gbxDatos = new System.Windows.Forms.GroupBox();
             this.lblFEspecialidad = new System.Windows.Forms.Label();
             this.txtParametro = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -183,17 +183,22 @@
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // gbxDatos
+            // btnCancelar
             // 
-            this.gbxDatos.BackColor = System.Drawing.Color.Transparent;
-            this.gbxDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.gbxDatos.Location = new System.Drawing.Point(600, 200);
-            this.gbxDatos.Name = "gbxDatos";
-            this.gbxDatos.Size = new System.Drawing.Size(500, 150);
-            this.gbxDatos.TabIndex = 28;
-            this.gbxDatos.TabStop = false;
-            this.gbxDatos.Text = "Datos de la Especialidad";
-            this.gbxDatos.Visible = false;
+            this.btnCancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancelar.BackgroundImage")));
+            this.btnCancelar.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Image = global::CpConsultorioMedico.Properties.Resources.Cancelar;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(409, 256);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.btnCancelar.Size = new System.Drawing.Size(159, 59);
+            this.btnCancelar.TabIndex = 100;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblEspecialidad
             // 
@@ -206,16 +211,6 @@
             this.lblEspecialidad.Size = new System.Drawing.Size(253, 24);
             this.lblEspecialidad.TabIndex = 29;
             this.lblEspecialidad.Text = "Nombre de la Especialidad:";
-            // 
-            // txtEspecialidad
-            // 
-            this.txtEspecialidad.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEspecialidad.Location = new System.Drawing.Point(332, 153);
-            this.txtEspecialidad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtEspecialidad.MaxLength = 100;
-            this.txtEspecialidad.Name = "txtEspecialidad";
-            this.txtEspecialidad.Size = new System.Drawing.Size(236, 32);
-            this.txtEspecialidad.TabIndex = 30;
             // 
             // btnGuardar
             // 
@@ -234,22 +229,27 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // btnCancelar
+            // txtEspecialidad
             // 
-            this.btnCancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancelar.BackgroundImage")));
-            this.btnCancelar.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Image = global::CpConsultorioMedico.Properties.Resources.Cancelar;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(409, 256);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.btnCancelar.Size = new System.Drawing.Size(159, 59);
-            this.btnCancelar.TabIndex = 100;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.txtEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEspecialidad.Location = new System.Drawing.Point(332, 153);
+            this.txtEspecialidad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtEspecialidad.MaxLength = 100;
+            this.txtEspecialidad.Name = "txtEspecialidad";
+            this.txtEspecialidad.Size = new System.Drawing.Size(236, 29);
+            this.txtEspecialidad.TabIndex = 30;
+            // 
+            // gbxDatos
+            // 
+            this.gbxDatos.BackColor = System.Drawing.Color.Transparent;
+            this.gbxDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.gbxDatos.Location = new System.Drawing.Point(600, 200);
+            this.gbxDatos.Name = "gbxDatos";
+            this.gbxDatos.Size = new System.Drawing.Size(500, 150);
+            this.gbxDatos.TabIndex = 28;
+            this.gbxDatos.TabStop = false;
+            this.gbxDatos.Text = "Datos de la Especialidad";
+            this.gbxDatos.Visible = false;
             // 
             // lblFEspecialidad
             // 
@@ -265,11 +265,11 @@
             // 
             // txtParametro
             // 
-            this.txtParametro.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtParametro.Location = new System.Drawing.Point(1139, 355);
+            this.txtParametro.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtParametro.Location = new System.Drawing.Point(1113, 352);
             this.txtParametro.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtParametro.Name = "txtParametro";
-            this.txtParametro.Size = new System.Drawing.Size(272, 32);
+            this.txtParametro.Size = new System.Drawing.Size(272, 29);
             this.txtParametro.TabIndex = 102;
             this.txtParametro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtParametro_KeyPress);
             // 
@@ -279,7 +279,7 @@
             this.btnBuscar.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = global::CpConsultorioMedico.Properties.Resources.Buscar;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(1417, 342);
+            this.btnBuscar.Location = new System.Drawing.Point(1412, 340);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);

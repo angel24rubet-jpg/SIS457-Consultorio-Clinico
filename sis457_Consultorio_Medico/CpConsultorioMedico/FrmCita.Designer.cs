@@ -271,20 +271,20 @@
             // 
             // cbxHora
             // 
-            this.cbxHora.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxHora.FormattingEnabled = true;
             this.cbxHora.Location = new System.Drawing.Point(757, 138);
             this.cbxHora.Name = "cbxHora";
-            this.cbxHora.Size = new System.Drawing.Size(121, 30);
+            this.cbxHora.Size = new System.Drawing.Size(121, 28);
             this.cbxHora.TabIndex = 4;
             // 
             // cbxDoctor
             // 
-            this.cbxDoctor.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxDoctor.FormattingEnabled = true;
             this.cbxDoctor.Location = new System.Drawing.Point(217, 156);
             this.cbxDoctor.Name = "cbxDoctor";
-            this.cbxDoctor.Size = new System.Drawing.Size(221, 30);
+            this.cbxDoctor.Size = new System.Drawing.Size(221, 28);
             this.cbxDoctor.TabIndex = 2;
             // 
             // lblDoctor
@@ -300,11 +300,11 @@
             // 
             // cbxEspecialidad
             // 
-            this.cbxEspecialidad.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxEspecialidad.FormattingEnabled = true;
             this.cbxEspecialidad.Location = new System.Drawing.Point(217, 103);
             this.cbxEspecialidad.Name = "cbxEspecialidad";
-            this.cbxEspecialidad.Size = new System.Drawing.Size(220, 30);
+            this.cbxEspecialidad.Size = new System.Drawing.Size(220, 28);
             this.cbxEspecialidad.TabIndex = 1;
             this.cbxEspecialidad.SelectedIndexChanged += new System.EventHandler(this.cbxEspecialidad_SelectedIndexChanged);
             // 
@@ -332,10 +332,10 @@
             // 
             // dtpFecha
             // 
-            this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFecha.Location = new System.Drawing.Point(757, 60);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(218, 22);
+            this.dtpFecha.Size = new System.Drawing.Size(259, 26);
             this.dtpFecha.TabIndex = 3;
             // 
             // lblFecha
@@ -362,7 +362,7 @@
             // 
             // txtPaciente
             // 
-            this.txtPaciente.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPaciente.Location = new System.Drawing.Point(217, 60);
             this.txtPaciente.MaxLength = 100;
             this.txtPaciente.Name = "txtPaciente";
@@ -405,7 +405,7 @@
             // 
             // txtFPaciente
             // 
-            this.txtFPaciente.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFPaciente.Location = new System.Drawing.Point(682, 275);
             this.txtFPaciente.MaxLength = 100;
             this.txtFPaciente.Name = "txtFPaciente";
@@ -431,7 +431,7 @@
             // 
             // txtParametro
             // 
-            this.txtParametro.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtParametro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtParametro.Location = new System.Drawing.Point(682, 233);
             this.txtParametro.MaxLength = 100;
             this.txtParametro.Name = "txtParametro";
