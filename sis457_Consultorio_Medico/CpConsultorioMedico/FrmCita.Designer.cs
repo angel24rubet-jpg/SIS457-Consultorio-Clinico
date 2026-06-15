@@ -275,7 +275,7 @@
             this.cbxHora.FormattingEnabled = true;
             this.cbxHora.Location = new System.Drawing.Point(757, 138);
             this.cbxHora.Name = "cbxHora";
-            this.cbxHora.Size = new System.Drawing.Size(121, 28);
+            this.cbxHora.Size = new System.Drawing.Size(152, 28);
             this.cbxHora.TabIndex = 4;
             // 
             // cbxDoctor
@@ -286,6 +286,7 @@
             this.cbxDoctor.Name = "cbxDoctor";
             this.cbxDoctor.Size = new System.Drawing.Size(221, 28);
             this.cbxDoctor.TabIndex = 2;
+            this.cbxDoctor.SelectedIndexChanged += new System.EventHandler(this.cbxDoctor_SelectedIndexChanged);
             // 
             // lblDoctor
             // 
@@ -335,8 +336,9 @@
             this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFecha.Location = new System.Drawing.Point(757, 60);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(259, 26);
+            this.dtpFecha.Size = new System.Drawing.Size(286, 26);
             this.dtpFecha.TabIndex = 3;
+            this.dtpFecha.ValueChanged += new System.EventHandler(this.dtpFecha_ValueChanged);
             // 
             // lblFecha
             // 

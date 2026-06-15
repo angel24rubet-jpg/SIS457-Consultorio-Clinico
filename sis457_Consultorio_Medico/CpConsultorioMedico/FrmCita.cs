@@ -274,6 +274,52 @@ namespace CpConsultorioMedico
 
             cbxHora.SelectedIndex = -1;
         }
+
+        // metodo cargar hora disponible
+       
+        private void cargarHorasDisponibles()
+        {
+            cbxHora.Items.Clear();
+
+            int idDoctor;
+
+            if (cbxDoctor.SelectedValue == null ||
+                !int.TryParse(cbxDoctor.SelectedValue.ToString(), out idDoctor))
+                return;
+
+            DateTime fecha = dtpFecha.Value.Date;
+
+            for (int h = 9; h <= 17; h++)
+            {
+                agregarHora(new TimeSpan(h, 0, 0), idDoctor, fecha);
+
+                if (h != 17)
+                    agregarHora(new TimeSpan(h, 30, 0), idDoctor, fecha);
+            }
+
+            cbxHora.SelectedIndex = -1;
+        }
+
+        // metodo auxiliar agregarHora
+
+        private void agregarHora(
+    TimeSpan hora,
+    int idDoctor,
+    DateTime fecha)
+        {
+            bool ocupado =
+                CitaCln.existeHorarioOcupado(
+                    idDoctor,
+                    fecha,
+                    hora);
+
+            string texto =
+                ocupado
+                ? "🔴 " + hora.ToString(@"hh\:mm") + " Ocupado"
+                : "🟢 " + hora.ToString(@"hh\:mm") + " Libre";
+
+            cbxHora.Items.Add(texto);
+        }
         private void btnEditar_Click(object sender, EventArgs e)
         {
             esNuevo = false;
@@ -345,7 +391,24 @@ namespace CpConsultorioMedico
                 cita.idEspecialidad = idEspecialidadSelected;
                 cita.idDoctor = idDoctorSelected;
                 cita.fecha = dtpFecha.Value;
-                cita.hora = cbxHora.SelectedItem is TimeSpan ts ? ts : default(TimeSpan);
+
+                //metodo  para identificar una hora ocupada
+                string textoHora = cbxHora.Text;
+
+                if (textoHora.Contains("🔴"))
+                {
+                    MessageBox.Show(
+                        "El horario seleccionado está ocupado.",
+                        "Consultorio Médico",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+
+                    return;
+                }
+
+                string horaTexto = textoHora.Substring(2, 5);
+
+                cita.hora = TimeSpan.Parse(horaTexto);
                 // Proteger Util.usuario
                 cita.usuarioRegistro = Util.usuario?.usuario ?? string.Empty;
 
@@ -562,6 +625,22 @@ namespace CpConsultorioMedico
         private void lblFPaciente_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cbxDoctor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!formularioCargado)
+                return;
+
+            cargarHorasDisponibles();
+        }
+
+        private void dtpFecha_ValueChanged(object sender, EventArgs e)
+        {
+            if (!formularioCargado)
+                return;
+
+            cargarHorasDisponibles();
         }
     }
 }

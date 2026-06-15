@@ -71,9 +71,8 @@ namespace ClnConsultorioMedico
         {
             using (var context = new LabConsultorioMedicoEntities())
             {
-                // listar por fecha y hora
                 return context.paHistorialClinicoListar()
-                    .OrderByDescending(x => x.fecha)
+                    .OrderByDescending(x => x.id)
                     .ToList();
             }
         }
