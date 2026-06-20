@@ -87,6 +87,7 @@ namespace ClnConsultorioMedico
                 return context.Cita.Include(x => x.Paciente).FirstOrDefault(x => x.Paciente.nombreCompletoPaciente == Paciente);
             }
         }
+        // metodo que nos permite no poder agendar cita en el mismo dia y con la misma especialidad
         public static bool existeCita(int idPaciente, int idEspecialidad, DateTime fecha)
         {
             using (var context = new LabConsultorioMedicoEntities())

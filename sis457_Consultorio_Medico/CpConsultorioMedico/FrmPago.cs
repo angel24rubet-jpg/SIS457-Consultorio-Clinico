@@ -104,6 +104,7 @@ namespace CpConsultorioMedico
             }
             return esValido;
         }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (validar())

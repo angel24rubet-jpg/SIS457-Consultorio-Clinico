@@ -145,6 +145,8 @@ namespace CpConsultorioMedico
             int savedId = 0;
             try
             {
+                //BUSCO EL PACIENTE POR CEDULA O NOMBRE PARA ASOCIARLO AL HISTORIAL
+
                 using (var ctx = new LabConsultorioMedicoEntities())
                 {
                     Paciente paciente = null;
@@ -163,6 +165,8 @@ namespace CpConsultorioMedico
 
                     if (!isEditing || currentCitaId == null)
                     {
+                        // CREACION DE NUEVO HISTORIAL CLINICO
+
                         var nueva = new HistorialClinico
                         {
                             fecha = DateTime.Now,
@@ -229,7 +233,9 @@ namespace CpConsultorioMedico
 
             var dialog = MessageBox.Show("¿Está seguro de eliminar la entrada seleccionada?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialog != DialogResult.Yes) return;
-             // eliminacion logica 
+             
+            // eliminacion logica 
+
             HistorialClinicoCln.eliminar(
                 id,
                 Util.usuario?.usuario);
@@ -247,7 +253,7 @@ namespace CpConsultorioMedico
         {
             Close();
         }
-
+        // EVENTO DE SELECCION DE FILA EN EL DATAGRIDVIEW PARA HABILITAR O DESHABILITAR LOS BOTONES DE EDITAR Y ELIMINAR
         private void dgvLista_SelectionChanged(object sender, EventArgs e)
         {
             bool has = dgvLista.CurrentRow != null && dgvLista.Rows.Count > 0;
@@ -330,7 +336,7 @@ namespace CpConsultorioMedico
                 cbxDoctor.Items.Clear();
             }
         }
-
+        // METODO PARA CARGAR EL HISTORIAL CLINICO CON PACIENTE Y DIAGNOSTICO, (>>>)
         private void CargarHistorial(int? idPaciente = null, DateTime? fecha = null)
         {
             using (var ctx = new LabConsultorioMedicoEntities())
@@ -349,6 +355,7 @@ namespace CpConsultorioMedico
                     var d = fecha.Value.Date;
                     q = q.Where(x => DbFunctions.TruncateTime(x.h.fecha) == d);
                 }
+                // MOSTRAR LISTA DESCENDENTE DEL HISTORIAL CLINICO CON PACIENTE Y DIAGNOSTICO
 
                 var lista = q.OrderByDescending(x => x.h.id)
                              .Select(x => new

@@ -303,9 +303,9 @@ namespace CpConsultorioMedico
         // metodo auxiliar agregarHora
 
         private void agregarHora(
-    TimeSpan hora,
-    int idDoctor,
-    DateTime fecha)
+        TimeSpan hora,
+        int idDoctor,
+        DateTime fecha)
         {
             bool ocupado =
                 CitaCln.existeHorarioOcupado(
@@ -320,6 +320,8 @@ namespace CpConsultorioMedico
 
             cbxHora.Items.Add(texto);
         }
+
+        // METODO PARA EDITAR CITA
         private void btnEditar_Click(object sender, EventArgs e)
         {
             esNuevo = false;
@@ -376,6 +378,7 @@ namespace CpConsultorioMedico
 
             return esValido;
         }
+        // metodo para guardar cita
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (validar())
@@ -424,6 +427,7 @@ namespace CpConsultorioMedico
                             MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
+                    // paciente ya cuenta con una cita registrada para esa especialidad en la misma fecha
 
                     if (CitaCln.existeCita(paciente.id, cita.idEspecialidad, dtpFecha.Value))
                     {

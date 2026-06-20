@@ -76,7 +76,7 @@ namespace ClnConsultorioMedico
             }
         }
 
-        // creamos el metodo para validar pago
+        //  metodo para validar pago
 
         public static bool existePago(int idCita)
         {

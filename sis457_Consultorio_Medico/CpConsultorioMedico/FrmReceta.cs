@@ -249,6 +249,8 @@ namespace CpConsultorioMedico
 
             if (esNuevo)
             {
+                // INSERTAR NUEVA RECETA
+
                 RecetaCln.insertar(receta);
 
                 MessageBox.Show(
@@ -259,6 +261,8 @@ namespace CpConsultorioMedico
             }
             else
             {
+                // EDITAR RECETA EXISTENTE
+
                 receta.id = idReceta;
 
                 RecetaCln.actualizar(receta);
@@ -328,6 +332,8 @@ namespace CpConsultorioMedico
 
             if (resultado == DialogResult.Yes)
             {
+                // ELIMINAR RECETA
+
                 RecetaCln.eliminar(
                     id,
                     Util.usuario.usuario);

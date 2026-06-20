@@ -102,6 +102,8 @@ namespace CpConsultorioMedico
                 "::: Consultorio Médico - Mensaje :::", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialog == DialogResult.Yes)
             {
+                // Eliminar el doctor de la base de datos
+
                 DoctorCln.eliminar(id, "");
                 listar();
                 MessageBox.Show("Doctor dado de baja correctamente", "::: Consultorio Médico - Mensaje :::",

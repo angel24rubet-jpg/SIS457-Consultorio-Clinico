@@ -36,7 +36,7 @@ namespace ClnConsultorioMedico
                 return context.SaveChanges();
             }
         }
-        // eliminacion logica en cascada
+        //  ANULACION LOGICA EN CASCADA : Al eliminar un paciente, se anulan sus citas, historiales clínicos y recetas asociadas
         public static int eliminar(int id, string usuarioRegistro)
         {
             using (var context = new LabConsultorioMedicoEntities())
@@ -82,7 +82,7 @@ namespace ClnConsultorioMedico
                         receta.usuarioRegistro = usuarioRegistro;
                     }
                 }
-
+                // INTRUCCION QUE GUARDA Y ACTUALIZA LOS CAMBIOS REALIZADOS 
                 return context.SaveChanges();
             }
         }

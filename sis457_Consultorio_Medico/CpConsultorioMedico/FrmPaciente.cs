@@ -219,7 +219,7 @@ namespace CpConsultorioMedico
             if (e.KeyChar == (char)Keys.Enter)
                 listar();
         }
-
+            // EVENTO PARA REALIZAR LA ANULACION 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             int index = dgvLista.CurrentCell.RowIndex;
@@ -309,7 +309,7 @@ namespace CpConsultorioMedico
             }
             return esValido;
         }
-
+            // EVENTO PARA REALIZAR GUARDAR O ACTUALIZAR 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (validar())
