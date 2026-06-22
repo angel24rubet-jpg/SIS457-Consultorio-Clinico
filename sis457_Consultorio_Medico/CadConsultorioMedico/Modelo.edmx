@@ -665,6 +665,7 @@
           <Property Type="String" Name="Especialidad" Nullable="false" MaxLength="30" />
           <Property Type="DateTime" Name="fecha" Nullable="false" />
           <Property Type="Time" Name="hora" Nullable="false" />
+          <Property Type="String" Name="EstadoPago" Nullable="false" MaxLength="9" />
         </ComplexType>
         <ComplexType Name="paReporteCitasPorFecha1_Result">
           <Property Type="Int32" Name="id" Nullable="false" />
@@ -887,6 +888,7 @@
                 <ScalarProperty Name="Especialidad" ColumnName="Especialidad" />
                 <ScalarProperty Name="fecha" ColumnName="fecha" />
                 <ScalarProperty Name="hora" ColumnName="hora" />
+                <ScalarProperty Name="EstadoPago" ColumnName="EstadoPago" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

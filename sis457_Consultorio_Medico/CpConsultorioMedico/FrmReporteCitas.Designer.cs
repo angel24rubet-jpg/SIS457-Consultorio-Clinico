@@ -94,9 +94,10 @@
             // dgvReporte
             // 
             this.dgvReporte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReporte.Location = new System.Drawing.Point(27, 42);
+            this.dgvReporte.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvReporte.Location = new System.Drawing.Point(3, 30);
             this.dgvReporte.Name = "dgvReporte";
-            this.dgvReporte.Size = new System.Drawing.Size(1194, 236);
+            this.dgvReporte.Size = new System.Drawing.Size(893, 322);
             this.dgvReporte.TabIndex = 5;
             // 
             // lblTitulo
@@ -125,7 +126,7 @@
             this.pnlAcciones.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pnlAcciones.Location = new System.Drawing.Point(86, 314);
             this.pnlAcciones.Name = "pnlAcciones";
-            this.pnlAcciones.Size = new System.Drawing.Size(1483, 503);
+            this.pnlAcciones.Size = new System.Drawing.Size(1483, 607);
             this.pnlAcciones.TabIndex = 24;
             // 
             // gbxLista
@@ -133,19 +134,20 @@
             this.gbxLista.BackColor = System.Drawing.Color.Transparent;
             this.gbxLista.Controls.Add(this.dgvReporte);
             this.gbxLista.Font = new System.Drawing.Font("Times New Roman", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxLista.Location = new System.Drawing.Point(118, 214);
+            this.gbxLista.Location = new System.Drawing.Point(311, 236);
             this.gbxLista.Name = "gbxLista";
-            this.gbxLista.Size = new System.Drawing.Size(1249, 340);
+            this.gbxLista.Size = new System.Drawing.Size(899, 355);
             this.gbxLista.TabIndex = 37;
             this.gbxLista.TabStop = false;
             this.gbxLista.Text = "Lista de reporte de Citas Médicas";
+            this.gbxLista.Enter += new System.EventHandler(this.gbxLista_Enter);
             // 
             // FrmReporteCitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1632, 819);
+            this.ClientSize = new System.Drawing.Size(1632, 948);
             this.Controls.Add(this.pnlAcciones);
             this.Controls.Add(this.lblTitulo);
             this.Name = "FrmReporteCitas";

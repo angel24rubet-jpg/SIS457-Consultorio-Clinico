@@ -33,12 +33,24 @@ namespace CpConsultorioMedico
             dtpFechaFin.Value.Date);
 
             dgvReporte.DataSource = lista;
+
+            dgvReporte.Columns["id"].Visible = false;
+
+            dgvReporte.Columns["EstadoPago"].HeaderText = "Estado de Pago";
+
+            dgvReporte.AutoSizeColumnsMode =
+                DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void FrmReporteCitas_Load_1(object sender, EventArgs e)
         {
             dtpFechaInicio.Value = DateTime.Today.AddMonths(-1);
             dtpFechaFin.Value = DateTime.Today;
+        }
+
+        private void gbxLista_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

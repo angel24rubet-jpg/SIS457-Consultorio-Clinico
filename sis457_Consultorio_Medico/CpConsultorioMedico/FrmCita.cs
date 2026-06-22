@@ -131,11 +131,12 @@ namespace CpConsultorioMedico
             dtpFecha.Value = DateTime.Now;
             cbxHora.SelectedIndex = -1;
         }
+
         private void FrmCita_Load(object sender, EventArgs e)
         {
             Size = new Size(862, 539);
 
-            // evita celeccionar fechas pasadas
+            // evita seleccionar fechas pasadas
 
             dtpFecha.MinDate = DateTime.Today;
 
@@ -146,6 +147,8 @@ namespace CpConsultorioMedico
             txtPaciente.Enabled = false;
             formularioCargado = true;
             dgvLista_SelectionChanged(dgvLista, EventArgs.Empty);
+
+            habilitarControles(false);
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -171,6 +174,15 @@ namespace CpConsultorioMedico
             else
             {
                 txtFPaciente.Text = nombrePaciente;
+
+                // Habilitar los controles para registrar una nueva cita
+                habilitarControles(false);
+
+                MessageBox.Show(
+                    "Paciente encontrado. Presione 'Nueva Cita' para registrar una cita.",
+                    "Consultorio Médico",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
             }
         }
 
@@ -228,9 +240,27 @@ namespace CpConsultorioMedico
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtFPaciente.Text))
+            {
+                MessageBox.Show(
+                    "Primero debe buscar un paciente.",
+                    "Consultorio Médico",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+
+                return;
+            }
+
             esNuevo = true;
+
+            // habilita controles
+
+            habilitarControles(true);
+
             Size = new Size(862, 713);
+
             cbxEspecialidad.Focus();
+
             cbxDoctor.DataSource = null;
             cbxDoctor.Items.Clear();
             cbxDoctor.SelectedIndex = -1;
@@ -253,6 +283,7 @@ namespace CpConsultorioMedico
             cbxDoctor.ValueMember = "id";
             cbxDoctor.SelectedIndex = -1;
         }
+        // EVENTO al cambiar la especialidad, se cargan los doctores disponibles para esa especialidad
         private void cbxEspecialidad_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (formularioCargado)
@@ -339,9 +370,15 @@ namespace CpConsultorioMedico
         }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            esNuevo = false;
+
             txtFPaciente.Clear();
             txtParametro.Clear();
+
+            habilitarControles(false);
+
             Size = new Size(862, 539);
+
             limpiar();
         }
         private void txtFPaciente_TextChanged(object sender, EventArgs e)
@@ -645,6 +682,16 @@ namespace CpConsultorioMedico
                 return;
 
             cargarHorasDisponibles();
+        }
+        // Método para habilitar o deshabilitar controles del formulario
+        private void habilitarControles(bool habilitar)
+        {
+
+            cbxEspecialidad.Enabled = habilitar;
+            cbxDoctor.Enabled = habilitar;
+            dtpFecha.Enabled = habilitar;
+            cbxHora.Enabled = habilitar;
+            btnGuardar.Enabled = habilitar;
         }
     }
 }

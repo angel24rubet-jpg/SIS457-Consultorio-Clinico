@@ -29,6 +29,8 @@ public partial class paReporteCitasPorFecha_Result
 
     public System.TimeSpan hora { get; set; }
 
+    public string EstadoPago { get; set; }
+
 }
 
 }

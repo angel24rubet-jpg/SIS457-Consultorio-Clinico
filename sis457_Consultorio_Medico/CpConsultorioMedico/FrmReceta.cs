@@ -71,6 +71,12 @@ namespace CpConsultorioMedico
 
             btnEditar.Enabled = lista.Count > 0;
             btnEliminar.Enabled = lista.Count > 0;
+
+            dgvLista.AutoSizeColumnsMode =
+            DataGridViewAutoSizeColumnsMode.Fill;
+
+            dgvLista.AutoSizeRowsMode =
+                DataGridViewAutoSizeRowsMode.AllCells;
         }
         // metodo limpiar campos
 
@@ -102,6 +108,7 @@ namespace CpConsultorioMedico
 
         private int idPacienteSeleccionado = 0;
 
+        // metodo para buscar paciente por cedula de identidad
         private void buscarPaciente()
         {
             string ci = txtCedulaIdentidad.Text.Trim();
@@ -117,12 +124,14 @@ namespace CpConsultorioMedico
                 txtCedulaIdentidad.Focus();
                 return;
             }
+            // abre la conexion a la base de datos para buscar el paciente por cedula de identidad
 
             using (var context = new LabConsultorioMedicoEntities())
             {
                 var paciente = context.Paciente
                     .FirstOrDefault(x =>
                         x.cedulaIdentidad == ci &&
+                        // solo pacientes activos
                         x.estado != -1);
 
                 if (paciente == null)
@@ -141,10 +150,47 @@ namespace CpConsultorioMedico
                 idPacienteSeleccionado = paciente.id;
                 txtPaciente.Text = paciente.nombreCompletoPaciente;
 
+                // llena el combo box de historiales del paciente seleccionado
                 cargarHistorialesPaciente();
             }
         }
 
+        // metodo para cargar historial d paciente
+
+        private void cargarHistorialesPaciente()
+        {
+            using (var context = new LabConsultorioMedicoEntities())
+            {
+                    // busca en la tabla historial clinico los histsoriales que pertenezacan a idPasiente
+                var lista = context.HistorialClinico
+                    .Where(x =>
+                        x.idPaciente == idPacienteSeleccionado &&
+                        x.estado != -1)
+                    // ordenan 
+                    .OrderByDescending(x => x.fecha)
+                    .ToList()
+                    .Select(x => new
+                    {
+                        x.id,
+                        Descripcion = x.fecha.HasValue
+                            ? x.fecha.Value.ToString("dd/MM/yyyy")
+                            : "Sin fecha"
+                    })
+                    .ToList();
+                // recupera los historiales para celeccionar uno y mostrar su diagnostico y tratamiento en los campos de texto
+
+                cbxHistorial.DataSource = lista;
+                cbxHistorial.DisplayMember = "Descripcion";
+                cbxHistorial.ValueMember = "id";
+                cbxHistorial.SelectedIndex = -1;
+
+                txtDiagnostico.Clear();
+                txtTratamiento.Clear();
+            }
+        }
+
+
+        // evento para mostrar el diagnostico y tratamiento del historial seleccionado
         private void cbxHistorial_SelectedIndexChanged(object sender, EventArgs e)
         {
             // metodo para seleccionar una historial y aparezca su nombre
@@ -155,7 +201,7 @@ namespace CpConsultorioMedico
                 txtTratamiento.Clear();
                 return;
             }
-
+             
             if (cbxHistorial.SelectedValue == null)
                 return;
 
@@ -166,12 +212,16 @@ namespace CpConsultorioMedico
 
             using (var context = new LabConsultorioMedicoEntities())
             {
+                // para busar el historial seleccionado 
                 var historial = context.HistorialClinico
                     .FirstOrDefault(x => x.id == idHistorial);
 
                 if (historial != null)
                 {
+                    // busca el paciente del historial para mostrar su nombre completo en el campo de texto
+
                     var paciente = context.Paciente
+                 
                         .FirstOrDefault(p => p.id == historial.idPaciente);
 
                     if (paciente != null)
@@ -354,36 +404,7 @@ namespace CpConsultorioMedico
             buscarPaciente();
 
         }
-        // metodo para cargar historial d paciente
-
-        private void cargarHistorialesPaciente()
-        {
-            using (var context = new LabConsultorioMedicoEntities())
-            {
-                var lista = context.HistorialClinico
-                    .Where(x =>
-                        x.idPaciente == idPacienteSeleccionado &&
-                        x.estado != -1)
-                    .OrderByDescending(x => x.fecha)
-                    .ToList()
-                    .Select(x => new
-                    {
-                        x.id,
-                        Descripcion = x.fecha.HasValue
-                            ? x.fecha.Value.ToString("dd/MM/yyyy")
-                            : "Sin fecha"
-                    })
-                    .ToList();
-
-                cbxHistorial.DataSource = lista;
-                cbxHistorial.DisplayMember = "Descripcion";
-                cbxHistorial.ValueMember = "id";
-                cbxHistorial.SelectedIndex = -1;
-
-                txtDiagnostico.Clear();
-                txtTratamiento.Clear();
-            }
-        }
+        
         // evento imprimir receta
         private void btnImprimir_Click(object sender, EventArgs e)
         {

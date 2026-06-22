@@ -270,9 +270,10 @@
             // dgvLista
             // 
             this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLista.Location = new System.Drawing.Point(27, 33);
+            this.dgvLista.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvLista.Location = new System.Drawing.Point(3, 30);
             this.dgvLista.Name = "dgvLista";
-            this.dgvLista.Size = new System.Drawing.Size(931, 150);
+            this.dgvLista.Size = new System.Drawing.Size(975, 192);
             this.dgvLista.TabIndex = 11;
             // 
             // pnlAcciones
@@ -421,7 +422,7 @@
             this.gbxLista.ForeColor = System.Drawing.SystemColors.ControlText;
             this.gbxLista.Location = new System.Drawing.Point(335, 799);
             this.gbxLista.Name = "gbxLista";
-            this.gbxLista.Size = new System.Drawing.Size(981, 208);
+            this.gbxLista.Size = new System.Drawing.Size(981, 225);
             this.gbxLista.TabIndex = 105;
             this.gbxLista.TabStop = false;
             this.gbxLista.Text = "Lista de Recetas";

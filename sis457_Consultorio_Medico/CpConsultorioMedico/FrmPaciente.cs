@@ -58,6 +58,7 @@ namespace CpConsultorioMedico
                 else if (dgvLista.Rows[0].Cells.Count > 0)
                 {
                     dgvLista.CurrentCell = dgvLista.Rows[0].Cells[0];
+
                 }
             }
 
@@ -240,7 +241,8 @@ namespace CpConsultorioMedico
         private void btnEditar_Click(object sender, EventArgs e)
         {
             esNuevo = false;
-            gbxDatos.Visible = true; // <-- mostrar grupo de datos
+            gbxDatos.Visible = true; // <-- mostrar los datos
+            // ajustar el tamaño del formulario para mostrar los datos
             Size = new Size(715, 695);
 
             int index = dgvLista.CurrentCell.RowIndex;
