@@ -25,7 +25,7 @@ namespace CpConsultorioMedico
 
             dgvReporte.DataSource = lista;
         }
-
+       // evento buscar 
         private void btnBuscar_Click_1(object sender, EventArgs e)
         {
             var lista = CitaCln.reporteCitasPorFecha(
@@ -37,7 +37,7 @@ namespace CpConsultorioMedico
             dgvReporte.Columns["id"].Visible = false;
 
             dgvReporte.Columns["EstadoPago"].HeaderText = "Estado de Pago";
-
+            //rellena el dataGridView
             dgvReporte.AutoSizeColumnsMode =
                 DataGridViewAutoSizeColumnsMode.Fill;
         }

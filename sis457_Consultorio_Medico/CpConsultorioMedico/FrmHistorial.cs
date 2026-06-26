@@ -55,9 +55,10 @@ namespace CpConsultorioMedico
                 MessageBox.Show("Error cargando historial: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        // evento agregar nuevo historial
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+            
             isEditing = false;
             currentCitaId = null;
             LimpiarCampos();
@@ -79,7 +80,7 @@ namespace CpConsultorioMedico
                 MessageBox.Show("Seleccione un registro para editar.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-
+            // busca el valor de ID del historila seleccioado
             object idObj = dgvLista.CurrentRow.Cells.Cast<DataGridViewCell>()
                 .FirstOrDefault(c => string.Equals(dgvLista.Columns[c.ColumnIndex].Name, "id", StringComparison.OrdinalIgnoreCase))?.Value
                 ?? dgvLista.CurrentRow.Cells[0].Value;
@@ -142,11 +143,11 @@ namespace CpConsultorioMedico
                 return;
             }
 
-            int savedId = 0;
+            //BUSCO EL PACIENTE POR CEDULA O NOMBRE PARA ASOCIARLO AL HISTORIAL
+
+            int savedId = 0; // declara variable
             try
             {
-                //BUSCO EL PACIENTE POR CEDULA O NOMBRE PARA ASOCIARLO AL HISTORIAL
-
                 using (var ctx = new LabConsultorioMedicoEntities())
                 {
                     Paciente paciente = null;
@@ -163,9 +164,9 @@ namespace CpConsultorioMedico
                         return;
                     }
 
+                    // CREACION DE NUEVO HISTORIAL CLINICO
                     if (!isEditing || currentCitaId == null)
                     {
-                        // CREACION DE NUEVO HISTORIAL CLINICO
 
                         var nueva = new HistorialClinico
                         {
@@ -178,9 +179,13 @@ namespace CpConsultorioMedico
                             idPaciente = paciente.id
                         };
                         ctx.HistorialClinico.Add(nueva);
+
                         ctx.SaveChanges();
+
                         savedId = nueva.id;
                     }
+
+                    // guardar una edicion si historial existe
                     else
                     {
                         var existente = ctx.HistorialClinico.FirstOrDefault(h => h.id == currentCitaId.Value);
@@ -212,7 +217,7 @@ namespace CpConsultorioMedico
                 MessageBox.Show("Error guardando entrada: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        // evento eliminar historial 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (dgvLista.CurrentRow == null)
@@ -248,19 +253,20 @@ namespace CpConsultorioMedico
 
             CargarHistorial();
         }
-
+        
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Close();
         }
-        // EVENTO DE SELECCION DE FILA EN EL DATAGRIDVIEW PARA HABILITAR O DESHABILITAR LOS BOTONES DE EDITAR Y ELIMINAR
+
+        // evento para seleccionar fila en DaraGridView
         private void dgvLista_SelectionChanged(object sender, EventArgs e)
         {
             bool has = dgvLista.CurrentRow != null && dgvLista.Rows.Count > 0;
             btnEditar.Enabled = has;
             btnEliminar.Enabled = has;
         }
-
+        // dobble click = editar
         private void dgvLista_DoubleClick(object sender, EventArgs e)
         {
             btnEditar.PerformClick();
@@ -276,7 +282,7 @@ namespace CpConsultorioMedico
             var fecha = dtpFFecha.Value.Date;
             CargarHistorial(null, fecha);
         }
-
+        // evento para limpiar los capos
         private void LimpiarCampos()
         {
             txtPaciente.Text = string.Empty;
@@ -287,7 +293,7 @@ namespace CpConsultorioMedico
             currentCitaId = null;
             isEditing = false;
         }
-
+        // metodo para cargar especialidad
         private void cargarEspecialidades()
         {
             try
@@ -304,7 +310,7 @@ namespace CpConsultorioMedico
                 cbxEspecialidad.Items.Clear();
             }
         }
-
+        // metodo para cargar doctores
         private void cargarDoctores(int idEspecialidad)
         {
             try
@@ -321,10 +327,11 @@ namespace CpConsultorioMedico
                 cbxDoctor.Items.Clear();
             }
         }
-
+        // metodo que permmite mostrar solo los doctores de la especialidad seleccionada
         private void cbxEspecialidad_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbxEspecialidad.SelectedValue == null) { cbxDoctor.DataSource = null; cbxDoctor.Items.Clear(); return; }
+            if (cbxEspecialidad.SelectedValue == null) { 
+                cbxDoctor.DataSource = null; cbxDoctor.Items.Clear(); return; }
 
             if (int.TryParse(cbxEspecialidad.SelectedValue.ToString(), out int id))
             {
@@ -374,7 +381,7 @@ namespace CpConsultorioMedico
 
             dgvLista_SelectionChanged(dgvLista, EventArgs.Empty);
         }
-
+        // metodo que permite maracr la seleccionn de un historial en la lista
         private void SelectRowById(int id)
         {
             if (dgvLista.DataSource == null) return;
@@ -396,7 +403,7 @@ namespace CpConsultorioMedico
                 }
             }
         }
-
+        // evento buscar click
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             var ci = txtParametro.Text.Trim();

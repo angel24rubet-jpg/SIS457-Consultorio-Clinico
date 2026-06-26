@@ -10,6 +10,7 @@ namespace ClnConsultorioMedico
 {
     public class CitaCln
     {
+        // metodo para insertar nueva cita
         public static int insertar(Cita cita)
         {
             using (var context = new LabConsultorioMedicoEntities())
@@ -19,6 +20,7 @@ namespace ClnConsultorioMedico
                 return cita.id;
             }
         }
+        // metodo para actualizar cuando editas citas
         public static int actualizar(Cita cita)
         {
             using (var context = new LabConsultorioMedicoEntities())
@@ -43,6 +45,7 @@ namespace ClnConsultorioMedico
                 return context.SaveChanges();
             }
         }
+        // metodo para obtener una cita por su id
         public static Cita obtenerUno(int id)
         {
             using (var context = new LabConsultorioMedicoEntities())
@@ -50,6 +53,7 @@ namespace ClnConsultorioMedico
                 return context.Cita.Find(id);
             }
         }
+        // metodo para listar citas con filtro por paciente, doctor o especialidad
         public static List<paCitaListar_Result> listarPa(string parametro)
         {
             using (var context = new LabConsultorioMedicoEntities())
@@ -67,6 +71,7 @@ namespace ClnConsultorioMedico
 
                 parametro = parametro.Trim();
                 return todas.Where(x =>
+                        (!string.IsNullOrEmpty(x.cedulaIdentidad) && x.cedulaIdentidad.Contains(parametro)) ||
                         (!string.IsNullOrEmpty(x.Paciente) && x.Paciente.Contains(parametro)) ||
                         (!string.IsNullOrEmpty(x.Doctor) && x.Doctor.IndexOf(parametro, StringComparison.OrdinalIgnoreCase) >= 0) ||
                         (!string.IsNullOrEmpty(x.Especialidad) && x.Especialidad.IndexOf(parametro, StringComparison.OrdinalIgnoreCase) >= 0)
@@ -87,7 +92,7 @@ namespace ClnConsultorioMedico
                 return context.Cita.Include(x => x.Paciente).FirstOrDefault(x => x.Paciente.nombreCompletoPaciente == Paciente);
             }
         }
-        // metodo que nos permite no poder agendar cita en el mismo dia y con la misma especialidad
+        // metodo para que paciente no tenga cita en el misma fecha y en la misma especialidad
         public static bool existeCita(int idPaciente, int idEspecialidad, DateTime fecha)
         {
             using (var context = new LabConsultorioMedicoEntities())
@@ -96,7 +101,7 @@ namespace ClnConsultorioMedico
                     c.idPaciente == idPaciente &&
                     c.idEspecialidad == idEspecialidad &&
                     DbFunctions.TruncateTime(c.fecha) == fecha.Date &&
-                    c.estado != -1); // opcional si manejas citas anuladas con estado -1
+                    c.estado != -1);
             }
         }
 

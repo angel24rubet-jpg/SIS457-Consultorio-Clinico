@@ -240,6 +240,7 @@
             this.lblFFecha.Size = new System.Drawing.Size(152, 22);
             this.lblFFecha.TabIndex = 27;
             this.lblFFecha.Text = "Filtrar por Fecha";
+            this.lblFFecha.Visible = false;
             // 
             // dtpFFecha
             // 
@@ -248,6 +249,7 @@
             this.dtpFFecha.Name = "dtpFFecha";
             this.dtpFFecha.Size = new System.Drawing.Size(218, 22);
             this.dtpFFecha.TabIndex = 28;
+            this.dtpFFecha.Visible = false;
             // 
             // gbxDatos
             // 

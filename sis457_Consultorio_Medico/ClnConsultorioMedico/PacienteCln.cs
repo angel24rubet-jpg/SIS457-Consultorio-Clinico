@@ -86,7 +86,7 @@ namespace ClnConsultorioMedico
                 return context.SaveChanges();
             }
         }
-
+        // metodo para obtener un paciente por su id
         public static Paciente obtenerUno(int id)
         {
             using (var context = new LabConsultorioMedicoEntities())
@@ -115,6 +115,7 @@ namespace ClnConsultorioMedico
                     .ToList();
             }
         }
+        // metodo para buscar paciente por nombre
         public static Paciente buscar(string nombrePaciente)
         {
             using (var context = new LabConsultorioMedicoEntities())
@@ -122,6 +123,7 @@ namespace ClnConsultorioMedico
                 return context.Paciente.FirstOrDefault(x => x.nombreCompletoPaciente == nombrePaciente);
             }
         }
+        // metodo para buscar paciente por cedula
         public static Paciente buscarPorCedula(string cedulaIdentidad)
         {
             using (var context = new LabConsultorioMedicoEntities())
@@ -129,6 +131,7 @@ namespace ClnConsultorioMedico
                 return context.Paciente.AsNoTracking().FirstOrDefault(x => x.cedulaIdentidad == cedulaIdentidad);
             }
         }
+        // metodo para obtener el nombre del paciente por cedula
         public static string obtenerNombrePaciente(string cedulaIdentidad)
         {
             using (var context = new LabConsultorioMedicoEntities())

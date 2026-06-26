@@ -104,6 +104,7 @@ namespace ClnConsultorioMedico
                 return context.Doctor.Where(x => x.estado != -1).ToList();
             }
         }
+        // metodo que nos permite listar los doctores por especialidad
         public static List<Doctor> listarPorEspecialidad(int idEspecialidad)
         {
             using (var context = new LabConsultorioMedicoEntities())

@@ -29,6 +29,8 @@ public partial class paCitaListar_Result
 
     public System.TimeSpan hora { get; set; }
 
+    public string cedulaIdentidad { get; set; }
+
 }
 
 }

@@ -70,7 +70,7 @@ namespace ClnConsultorioMedico
                     .ToList();
             }
         }
-
+        // metodo para listar todas las especialidades activas (estado != -1)
         public static List<Especialidad> listar()
         {
             using (var context = new LabConsultorioMedicoEntities())

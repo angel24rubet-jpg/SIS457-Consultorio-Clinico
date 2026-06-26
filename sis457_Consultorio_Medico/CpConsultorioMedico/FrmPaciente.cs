@@ -267,7 +267,7 @@ namespace CpConsultorioMedico
             gbxDatos.Visible = false; // <-- ocultar datos nuevamente
         }
 
-
+        // METODO PARA VALIDACION DE LOS CAMPOS PARA GUARDAR O ACTUALIZAR
         private bool validar()
         {
             bool esValido = true;

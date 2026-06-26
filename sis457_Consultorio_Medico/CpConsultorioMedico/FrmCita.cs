@@ -90,13 +90,13 @@ namespace CpConsultorioMedico
             // No se pudo determinar
             return false;
         }
-
+        // metodo Listar citas por paciente
         public void listar()
         {
             var lista = CitaCln.listarPa(txtParametro.Text.Trim());
             dgvLista.DataSource = lista;
 
-            // Proteger accesos a columnas
+            // Proteger accesos a columnas (las oculta)
             var col = GetColumn("id"); if (col != null) col.Visible = false;
             col = GetColumn("estado"); if (col != null) col.Visible = false;
             col = GetColumn("idEspecialidad"); if (col != null) col.Visible = false;
@@ -111,6 +111,7 @@ namespace CpConsultorioMedico
             col = GetColumn("usuarioRegistro"); if (col != null) col.HeaderText = "Usuario Registro";
             col = GetColumn("fechaRegistro"); if (col != null) col.HeaderText = "Fecha Registro";
 
+            // verifica si hay registros en la lista 
             if (lista.Count > 0)
             {
                 var cFecha = GetColumn("fecha");
@@ -122,7 +123,7 @@ namespace CpConsultorioMedico
             btnEditar.Enabled = lista.Count > 0;
             btnEliminar.Enabled = lista.Count > 0;
         }
-
+        // metodo limpiar controles
         private void limpiar()
         {
             txtPaciente.Clear();
@@ -131,7 +132,7 @@ namespace CpConsultorioMedico
             dtpFecha.Value = DateTime.Now;
             cbxHora.SelectedIndex = -1;
         }
-
+        // apertura del formulario citas
         private void FrmCita_Load(object sender, EventArgs e)
         {
             Size = new Size(862, 539);
@@ -146,8 +147,13 @@ namespace CpConsultorioMedico
             txtFPaciente.Enabled = false;
             txtPaciente.Enabled = false;
             formularioCargado = true;
+
+            dtpFFecha.Visible = false;
+            lblFFecha.Visible = false;
+
             dgvLista_SelectionChanged(dgvLista, EventArgs.Empty);
 
+            // Inicialmente deshabilitar los controles de registro de cita
             habilitarControles(false);
         }
 
@@ -155,8 +161,10 @@ namespace CpConsultorioMedico
         {
             Close();
         }
+        // optener paciente por cedula de identidad (BUSCAR)
         public void obtenerPaciente()
         {
+            // Verificar si el campo de búsqueda está vacío
             if (string.IsNullOrWhiteSpace(txtParametro.Text.Trim()))
             {
                 txtFPaciente.Text = string.Empty;
@@ -175,17 +183,17 @@ namespace CpConsultorioMedico
             {
                 txtFPaciente.Text = nombrePaciente;
 
-                // Habilitar los controles para registrar una nueva cita
+                // desabilita los controles para registrar una nueva cita
                 habilitarControles(false);
 
-                MessageBox.Show(
-                    "Paciente encontrado. Presione 'Nueva Cita' para registrar una cita.",
-                    "Consultorio Médico",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
+               // MessageBox.Show(
+                    //"Paciente encontrado. Presione 'Nueva Cita' para registrar una cita.",
+                   // "Consultorio Médico",
+                  //  MessageBoxButtons.OK,
+                  //  MessageBoxIcon.Information);
             }
         }
-
+        // evento click del boton buscar
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             listar();
@@ -199,6 +207,7 @@ namespace CpConsultorioMedico
                 obtenerPaciente();
             }
         }
+        // metodo listar citas por fecha (filtrar por fecha)
         public void listarFecha()
         {
             var lista = CitaCln.listarFecha(dtpFFecha.Value);
@@ -228,6 +237,7 @@ namespace CpConsultorioMedico
             btnEditar.Enabled = lista.Count > 0;
             btnEliminar.Enabled = lista.Count > 0;
         }
+        // evento al cambiar la fecha de busqueda (filtrar por fecha)
         private void dtpFFecha_ValueChanged(object sender, EventArgs e)
         {
             listarFecha();
@@ -237,7 +247,7 @@ namespace CpConsultorioMedico
                 txtFPaciente.Clear();
             }
         }
-
+        // evento click del boton nueva cita
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtFPaciente.Text))
@@ -263,8 +273,11 @@ namespace CpConsultorioMedico
 
             cbxDoctor.DataSource = null;
             cbxDoctor.Items.Clear();
+            // deseleccionar especialidad y doctor al iniciar nueva cita
             cbxDoctor.SelectedIndex = -1;
         }
+
+        // metodo para cargar especialidades y doctores
         private void cargarEspecialidades()
         {
             var especialidades = EspecialidadCln.listar();
@@ -273,6 +286,7 @@ namespace CpConsultorioMedico
             cbxEspecialidad.ValueMember = "id";
             cbxEspecialidad.SelectedIndex = -1;
         }
+        // metodo para cargar doctores por especialidad
         private void cargarDoctores(int idEspecialidad)
         {
             var doctores = DoctorCln.listarPorEspecialidad(idEspecialidad);
@@ -292,6 +306,7 @@ namespace CpConsultorioMedico
                 cargarDoctores(idEspecialidad);
             }
         }
+        // metodo para cargar horas de atencion del doctor
         private void cargarHoras()
         {
             cbxHora.Items.Clear();
@@ -313,7 +328,7 @@ namespace CpConsultorioMedico
             cbxHora.Items.Clear();
 
             int idDoctor;
-
+            // Validar que se haya seleccionado un doctor y que el valor sea un entero válido
             if (cbxDoctor.SelectedValue == null ||
                 !int.TryParse(cbxDoctor.SelectedValue.ToString(), out idDoctor))
                 return;
@@ -352,10 +367,13 @@ namespace CpConsultorioMedico
             cbxHora.Items.Add(texto);
         }
 
-        // METODO PARA EDITAR CITA
+        // EVENTO PARA EDITAR CITA
         private void btnEditar_Click(object sender, EventArgs e)
         {
             esNuevo = false;
+
+            habilitarControles(true);
+
             Size = new Size(862, 713);
             int index = dgvLista.CurrentCell.RowIndex;
             int id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
@@ -368,6 +386,7 @@ namespace CpConsultorioMedico
             cbxHora.SelectedItem = cita.hora;
             cbxEspecialidad.Focus();
         }
+        // evento click del boton cancelar
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             esNuevo = false;
@@ -381,10 +400,12 @@ namespace CpConsultorioMedico
 
             limpiar();
         }
+        // evento para sincronizar el nombre del paciente con el campo oculto
         private void txtFPaciente_TextChanged(object sender, EventArgs e)
         {
             txtPaciente.Text = txtFPaciente.Text;
         }
+        // metodo para validar campos obligatorios
         private bool validar()
         {
             bool esValido = true;
@@ -409,7 +430,7 @@ namespace CpConsultorioMedico
             }
             if (string.IsNullOrEmpty(cbxHora.Text))
             {
-                erpHora.SetError(cbxHora, "El campo Doctor es obligatorio");
+                erpHora.SetError(cbxHora, "El campo Hora es obligatorio");
                 esValido = false;
             }
 
@@ -420,9 +441,10 @@ namespace CpConsultorioMedico
         {
             if (validar())
             {
+                // objeto donde se almacena los datos optenidos
                 var cita = new Cita();
 
-                // Proteger accesos que podrían ser null
+                // declara dos variables
                 int idEspecialidadSelected = 0;
                 int idDoctorSelected = 0;
                 if (cbxEspecialidad?.SelectedValue != null) int.TryParse(cbxEspecialidad.SelectedValue.ToString(), out idEspecialidadSelected);
@@ -431,6 +453,8 @@ namespace CpConsultorioMedico
                 cita.idEspecialidad = idEspecialidadSelected;
                 cita.idDoctor = idDoctorSelected;
                 cita.fecha = dtpFecha.Value;
+
+                /////////// VERIFICACION DE HORA OCUPADA ////////////////////////
 
                 //metodo  para identificar una hora ocupada
                 string textoHora = cbxHora.Text;
@@ -446,11 +470,14 @@ namespace CpConsultorioMedico
                     return;
                 }
 
+                // extrae solamente la hora, y guarda al usuario
                 string horaTexto = textoHora.Substring(2, 5);
 
                 cita.hora = TimeSpan.Parse(horaTexto);
-                // Proteger Util.usuario
+                
                 cita.usuarioRegistro = Util.usuario?.usuario ?? string.Empty;
+
+                ////////// REGISTRO DE UNA NUEVA CITA /////////////////
 
                 if (esNuevo)
                 {
@@ -473,12 +500,9 @@ namespace CpConsultorioMedico
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
-                    // comprobacion de que el doctor ya tiene una citaen esa fecha y horario 
+                    // validacion para que el doctor ya tiene una citaen esa fecha y horario 
 
-                    if (CitaCln.existeHorarioOcupado(
-                        cita.idDoctor,
-                        dtpFecha.Value,
-                        cita.hora))
+                    if (CitaCln.existeHorarioOcupado(cita.idDoctor, dtpFecha.Value, cita.hora))
                     {
                         MessageBox.Show(
                             "El doctor ya tiene una cita programada en esa fecha y hora.",
@@ -492,9 +516,11 @@ namespace CpConsultorioMedico
                     cita.estado = 1;
                     CitaCln.insertar(cita);
                 }
+
+                        //////// ACTUALIZACION (EDITAR UNA CITA) ///////
                 else
                 {
-                    // Comprobaciones para evitar NullReferenceException al editar
+                    // validacion de fila seleccionada
                     if (dgvLista == null || dgvLista.CurrentRow == null)
                     {
                         MessageBox.Show("No hay una cita seleccionada para editar.", "::: Consultorio Médico - Mensaje :::",
@@ -502,7 +528,7 @@ namespace CpConsultorioMedico
                         return;
                     }
 
-                    // Obtener id de forma segura usando GetCellValue
+                    // Obtener id de cita seleccionada
                     var idObj = GetCellValue(dgvLista.CurrentRow, "id");
                     if (idObj == null || !int.TryParse(idObj.ToString(), out int id))
                     {
@@ -525,10 +551,14 @@ namespace CpConsultorioMedico
                     cita.idPaciente = paciente.id;
                     CitaCln.actualizar(cita);
                 }
+
                 listar();
+
                 btnCancelar.PerformClick();
+
                 MessageBox.Show("Cita guardada correctamente", "::: Consultorio Médico - Mensaje :::",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 txtFPaciente.Clear();
                 txtParametro.Clear();
             }
@@ -589,7 +619,7 @@ namespace CpConsultorioMedico
             var especialidadObj = GetCellValue(row, "nombre") ?? GetCellValue(row, "Especialidad");
             string especialidad = especialidadObj?.ToString() ?? string.Empty;
 
-            // Obtener idEspecialidad (si no existe, usar 0)
+            // declara una variable para almacenar ID
             int idEspecialidad = 0;
             var idEspObj = GetCellValue(row, "idEspecialidad");
             if (idEspObj != null)
@@ -600,7 +630,7 @@ namespace CpConsultorioMedico
             // 6. Abrir formulario de pago
             new FrmPago(this, id, paciente, especialidad, idEspecialidad).ShowDialog();
         }
-
+         // evento donde se inserta parametro ID
         private void txtParametro_TextChanged(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(txtParametro.Text))
@@ -608,7 +638,7 @@ namespace CpConsultorioMedico
                 parametroValido = txtParametro.Text.Trim();
             }
         }
-
+        // metodo pera refrescar despues de realizar pago
         public void refrescar()
         {
             var parametro = parametroValido;
@@ -623,6 +653,7 @@ namespace CpConsultorioMedico
                 dgvLista.DataSource = lista;
             }
         }
+             // habilitar y desabilitar botones
         private void dgvLista_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvLista.CurrentRow == null)
@@ -667,7 +698,7 @@ namespace CpConsultorioMedico
         {
 
         }
-
+        // evento que carga horas disponibles cuando cambian de doctor y fecha
         private void cbxDoctor_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (!formularioCargado)
